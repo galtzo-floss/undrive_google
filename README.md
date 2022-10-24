@@ -109,7 +109,7 @@ keep_zip: true
 #   3. others - comprises all selected formats that are not specified
 # Values are one of:
 #   1. contain a `.` - explicitly renamed to the exact file name provided.
-#   2. snake - replaces spaces with underscores 
+#   2. snake - replaces spaces with underscores
 rename:
    html: 'resume.html'
    others: 'snake'
@@ -129,7 +129,7 @@ and leave the remaining settings as default, except for `title`.
 
 ```yaml
 # [String, Array<String>] Which formats to download?
-formats: 
+formats:
    - 'odt'
    - 'txt'
    - 'epub'

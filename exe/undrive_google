@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "optparse"
+# require "undrive_google"
+
+OptionParser.new do |parser|
+  # --help text
+  parser.banner = <<~BANNER
+    UnDrive Your Google File Today!
+
+    Usage: undrive_google [options]
+  BANNER
+
+  parser.on("-h", "--help", "Prints this help") do
+    puts parser
+    exit
+  end
+end.parse!

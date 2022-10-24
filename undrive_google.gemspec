@@ -3,8 +3,13 @@
 require_relative "lib/undrive_google/version"
 
 Gem::Specification.new do |spec|
+  spec.add_dependency("version_gem", ["~> 1.1", ">= 1.1.1"])
+
+  spec.cert_chain = ["certs/pboling.pem"]
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
+
   spec.name = "undrive_google"
-  spec.version = UndriveGoogle::VERSION
+  spec.version = UndriveGoogle::Version::VERSION
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
@@ -17,21 +22,28 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://git.sr.ht/~galtzo/undrive_google"
   spec.metadata["changelog_uri"] = "https://git.sr.ht/~galtzo/undrive_google"
+  spec.metadata["bug_tracker_uri"] = "https://todo.sr.ht/~galtzo/undrive_google"
+  spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
+  spec.metadata["wiki_uri"] = "https://man.sr.ht/~galtzo/undrive_google/"
+  spec.metadata["funding_uri"] = "https://liberapay.com/pboling"
+  spec.metadata["mailing_list_uri"] = "https://lists.sr.ht/~galtzo/undrive_google-devel"
+  spec.metadata["rubygems_mfa_required"] = "true"
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(__dir__) do
-    `git ls-files -z`.split("\x0").reject do |f|
-      (f == __FILE__) || f.match(%r{\A(?:(?:bin|test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
-    end
-  end
+  spec.files = Dir[
+    "lib/**/*",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "exe/undrive_google",
+    "LICENSE.txt",
+    "README.md",
+    "SECURITY.md",
+  ]
+
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
-
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_development_dependency "rspec-block_is_expected"
+  spec.add_development_dependency "rubocop-lts", "~> 22.0"
 end
