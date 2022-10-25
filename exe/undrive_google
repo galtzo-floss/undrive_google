@@ -1,19 +1,16 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# Std-lib
 require "optparse"
-# require "undrive_google"
 
-OptionParser.new do |parser|
-  # --help text
-  parser.banner = <<~BANNER
-    UnDrive Your Google File Today!
+# Gems
+require "bundler/setup"
+require "byebug"
 
-    Usage: undrive_google [options]
-  BANNER
+# This library
+require "undrive_google"
 
-  parser.on("-h", "--help", "Prints this help") do
-    puts parser
-    exit
-  end
-end.parse!
+cli = UndriveGoogle::CLI.instance
+cli.parse(ARGV)
+cli.liberate!

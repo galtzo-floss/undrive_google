@@ -1,12 +1,32 @@
 # frozen_string_literal: true
 
 module UndriveGoogle
-  # Defines the CLI behavior
+  # Defines the CLI behavior & provides the Google Drive Session
   class CLI
-    attr_accessor :options
+    include Singleton
+    attr_reader :parser, :options, :session
 
-    def initialize(options)
-      @options = options.dup
+    # Options specified on the command line are collected in *@options*.
+    #
+    # @param [ARGV] args
+    # @return nil
+    def parse(args)
+      @options = Options.instance
+      @parser = OptionParser.new do |parser|
+        @options.define_options(parser)
+        parser.parse!(args)
+      end
+      raise UndriveGoogle::Error, "file_id is required!" unless options.file_id
+      raise UndriveGoogle::Error, "dir is required!" unless options.dir
+
+      @session = Session.instance
+
+      nil
+    end
+
+    def liberate!
+      session.file
+      CaptiveFile.instance.liberate!
     end
   end
 end

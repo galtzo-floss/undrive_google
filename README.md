@@ -14,6 +14,16 @@ If yes, DO NOT use this gem. Instead follow [these instructions](https://support
 OTOH, if you want to "own", host, track, etc your 'own' files
 (e.g. your resume), DO use this gem.
 
+## NOTE: Export epub
+
+There is a bug (missing feature) in `google_drive` gem preventing export of epub.  You can use this patched branch:
+
+```ruby
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+```
+
+And you can upvote this PR [#427](https://github.com/gimite/google-drive-ruby/pull/427).
+
 ## Story Time
 
 Imagine Google Drive is a 🐭
@@ -25,7 +35,7 @@ Tell me if you've heard this one already.
 1. Give 🐭 your 🍪 for "safe-keeping"
 2. Recognizing this SPoF, you ask 🐭 to give back a 🍪 copy
 3. "I'll run it through my 🍪 🖨", says 🐭
-4. 🖨 replicates various 🍪 formats: `pdf`, `odt`, `docx`, `txt`, `rtf` and `epub`
+4. 🖨 replicates various 🍪 extensions: `pdf`, `odt`, `docx`, `txt`, `rtf` and `epub`
 5. Rename 🍪 for web (e.g. replace ` ` with `_`)
 6. Extract replicated `.zip` format to `.html`
 7. Rename extracted HTML file for self-hosting
@@ -37,8 +47,11 @@ Tell me if you've heard this one already.
 13. Bake a new 🍪
 14. GOTO 1
 
-This gem solves the classic 🐭-🍪 problem by automating steps 3-9.
+This gem solves the classic 🐭-🍪 problem by automating steps 3-8.
 Will save at least 15 minutes each loop.
+
+TODO:
+Configuration supports step 9, but it hasn't been implemented yet.
 
 Note that it doesn't have to be a resume.
 There are likely other use cases that apply.
@@ -91,45 +104,62 @@ What goes in the `undrive_google.yml` file?
 
 ### Default: Liberate All Formats
 
-All values shown are default. Without any ``
+All non-commented values shown are default.
 ```yaml
-# [String, Array<String>] Which formats to download?
-formats: 'all'
+# [PATH] Path to the JSON file with Google Service Account Key
+key_file: 'service_account_private_key.json'
+
+# ID of file to liberate, as key or title
+file_id: '<actual-key-or-title>'
+file_by: 'key' # or 'title'
+
+# [String, Array<String>] Which extensions to download?
+extensions: 'all'
 
 # [Boolean] The HTML format download comes as a .zip archive.
-# Want the .zip unzipped? (only relevant if formats is `all`, or includes `zip`)
+# Want the .zip unzipped? (only relevant if extensions is `all`, or includes `zip`)
 unzip: true
 # [Boolean] Keep the .zip after extracting the `.html`?
 keep_zip: true
 
-# [Hash] Rename downloaded files?
-# Keys are one of:
+# Rename downloaded files?
+# rename_<type>, where type is:
 #   1. a downloadable format name, like `odt`, `docx`, `pdf`, etc
-#   2. html
-#   3. others - comprises all selected formats that are not specified
-# Values are one of:
-#   1. contain a `.` - explicitly renamed to the exact file name provided.
-#   2. snake - replaces spaces with underscores
-rename:
-   html: 'resume.html'
-   others: 'snake'
+#   2. html (which isn't downloadable, has to be unzipped from .zip)
+# e.g.
+# rename_html: 'resume.html'
+
+# Rename downloaded files following a pattern?
+# Only applies to files not explicitly specified with rename-<type>
+# Value will be splatted to gsub
+rename_pattern:
+  - "_"
+  - " "
+
+# [PATH]
+dir: '' # defaults to current working directory
+
+verbose: true # or false
+
+#
+# TODO: implementation for title and lang
+#
+# [String] HTML title element inner text.
+title: '' # When empty, defaults to the title of the file.
 
 # [String] If unzipping `.zip`, adds lang attribute to html tag,
 #            value is like `fr`, `es`, etc.
 lang: 'en'
-
-# [String] HTML title element inner text.
-title: ''
 ```
 
 ### Example: Liberate Specific Formats (keeping other defaults)
 
-In this example we choose to download only the `odt`, `txt`, and `epub` formats,
+In this example we choose to download only the `odt`, `txt`, and `epub` extensions,
 and leave the remaining settings as default, except for `title`.
 
 ```yaml
-# [String, Array<String>] Which formats to download?
-formats:
+# [String, Array<String>] Which extensions to download?
+extensions:
    - 'odt'
    - 'txt'
    - 'epub'

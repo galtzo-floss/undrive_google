@@ -9,8 +9,6 @@ RSpec.describe "UnDrive Google CLI" do
     let(:options) { { help: nil } }
 
     it_behaves_like "cli output", <<~BANNER
-      UnDrive Your Google File Today!
-
       Usage: undrive_google [options]
     BANNER
   end

@@ -1,28 +1,42 @@
 # frozen_string_literal: true
 
+# Stdlib
+
+ALL_FORMATTERS = ENV.fetch("COVER_ALL") { ENV.fetch("CI_CODECOV") { ENV.fetch("CI", nil) } }
+
+# RSpec Support
+require "support/shared_contexts/google_session"
+require "support/shared_examples/cli_output"
+require "support/rspec_matchers/non_output"
+
 # Third party libs
 require "rspec/block_is_expected"
 require "version_gem/rspec"
+require "byebug"
+require "simplecov" # Config file `.simplecov` is run immediately when simplecov loads
+require "codecov"
+require "simplecov-json"
+require "simplecov-lcov"
+require "simplecov-cobertura"
+
+# This will override the formatter set in .simplecov
+if ALL_FORMATTERS
+  SimpleCov::Formatter::LcovFormatter.config do |c|
+    c.report_with_single_file = true
+    c.single_report_path = "coverage/lcov.info"
+  end
+
+  SimpleCov.formatters = [
+    SimpleCov::Formatter::HTMLFormatter,
+    SimpleCov::Formatter::CoberturaFormatter, # XML for Jenkins
+    SimpleCov::Formatter::LcovFormatter,
+    SimpleCov::Formatter::JSONFormatter, # For CodeClimate
+    SimpleCov::Formatter::Codecov # For CodeCov
+  ]
+end
 
 # This gem
 require "undrive_google"
 
-RSpec::Matchers.define_negated_matcher :not_output, :output
-RSpec.shared_examples_for "cli output" do |expected|
-  it "is printed" do
-    block_is_expected.to not_output.to_stderr_from_any_process &
-                         output(a_string_including(expected)).to_stdout_from_any_process
-  end
-end
-
-RSpec.configure do |config|
-  # Enable flags like --only-failures and --next-failure
-  config.example_status_persistence_file_path = ".rspec_status"
-
-  # Disable RSpec exposing methods globally on `Module` and `main`
-  config.disable_monkey_patching!
-
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
-  end
-end
+# RSpec Configs
+require "support/rspec_config/core"

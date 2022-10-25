@@ -3,6 +3,7 @@
 require_relative "lib/undrive_google/version"
 
 Gem::Specification.new do |spec|
+  spec.add_dependency("google_drive", "~> 3.0")
   spec.add_dependency("version_gem", ["~> 1.1", ">= 1.1.1"])
 
   spec.cert_chain = ["certs/pboling.pem"]

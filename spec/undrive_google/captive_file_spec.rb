@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe UndriveGoogle::CLI do
+RSpec.describe UndriveGoogle::CaptiveFile do
   subject(:instance) { described_class.instance }
 
   describe ".instance" do
@@ -9,24 +9,17 @@ RSpec.describe UndriveGoogle::CLI do
     end
   end
 
-  describe "#liberate!" do
+  describe ".liberate!" do
     subject(:liberate) { instance.liberate! }
 
     include_context "with google session" do
       before do
         allow(double_file).to receive(:export_as_file).with("/My_Title.docx", "docx")
-        instance.parse(["--no-verbose"])
       end
     end
 
     it "does not raise error" do
       block_is_expected.not_to raise_error
-    end
-
-    it "liberates the captive" do
-      allow(UndriveGoogle::CaptiveFile.instance).to receive(:liberate!)
-      liberate
-      expect(UndriveGoogle::CaptiveFile.instance).to have_received(:liberate!)
     end
   end
 end
