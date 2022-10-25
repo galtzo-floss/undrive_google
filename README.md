@@ -18,8 +18,17 @@ OTOH, if you want to "own", host, track, etc your 'own' files
 
 There is a bug (missing feature) in `google_drive` gem preventing export of epub.  You can use this patched branch:
 
+Create a Gemfile:
 ```ruby
+source "https://rubygems.org"
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+```
+
+Then ensure the script will use the Gemfile 
+```shell
+BUNDLE_GEMFILE=path/to/Gemfile bundle update
+BUNDLE_GEMFILE=path/to/Gemfile undrive_google -c path/to/config
 ```
 
 And you can upvote this PR [#427](https://github.com/gimite/google-drive-ruby/pull/427).
