@@ -10,5 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## 1.0.1 - 2022-10-26
+### Added
+- Support for lang
+- Support for title
+- Support for unzipping zip
+- Support for deleting zip
+- Support for Renaming HTML
+
 ## 1.0.0 - 2022-10-25
 - Initial release

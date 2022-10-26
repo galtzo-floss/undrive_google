@@ -14,8 +14,12 @@ RSpec.describe UndriveGoogle::CLI do
 
     include_context "with google session" do
       before do
-        allow(double_file).to receive(:export_as_file).with("/My_Title.docx", "docx")
-        instance.parse(["--no-verbose"])
+        file_types = (UndriveGoogle::FILE_TYPES - [:zip])
+        file_types.each do |type|
+          allow(double_file).to receive(:export_as_file).with("/My_Title.#{type}", type)
+        end
+        extensions = file_types.join(",")
+        instance.parse(["--no-verbose", "--extensions=#{extensions}"])
       end
     end
 

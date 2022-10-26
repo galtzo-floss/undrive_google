@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+DEBUG = ENV["UNDRIVE_DEBUG"] == "true"
+
 # Std-lib
 require "optparse"
 
 # Gems
 require "bundler/setup"
-require "byebug"
+require "byebug" if DEBUG
 
 # This library
 require "undrive_google"

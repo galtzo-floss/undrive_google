@@ -120,7 +120,7 @@ RSpec.describe UndriveGoogle::Options do
         end
 
         it "sets keep_zip" do
-          block_is_expected.to change(instance, :keep_zip).from(nil).to(false)
+          block_is_expected.to change(instance, :keep_zip).from(true).to(false)
         end
       end
 
@@ -132,7 +132,7 @@ RSpec.describe UndriveGoogle::Options do
         end
 
         it "sets keep_zip" do
-          block_is_expected.to change(instance, :keep_zip).from(nil).to(true)
+          block_is_expected.not_to change(instance, :keep_zip).from(true)
         end
       end
 
@@ -180,9 +180,10 @@ RSpec.describe UndriveGoogle::Options do
         end
 
         it "sets verbose" do
-          block_is_expected.to_not change(instance, :verbose).from(false)
+          block_is_expected.not_to change(instance, :verbose).from(false)
         end
       end
+
       context "when --verbose" do
         let(:args) { ["--verbose"] }
 

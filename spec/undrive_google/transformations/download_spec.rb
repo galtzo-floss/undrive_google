@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe UndriveGoogle::Actions::Download do
-  subject(:instance) { described_class.new("docx") }
+RSpec.describe UndriveGoogle::Transformations::Download do
+  subject(:instance) { described_class.new("tmp/My_Title.docx", "docx") }
 
   include_context "with google session"
 

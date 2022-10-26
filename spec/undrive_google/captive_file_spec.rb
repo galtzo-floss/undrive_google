@@ -15,6 +15,11 @@ RSpec.describe UndriveGoogle::CaptiveFile do
     include_context "with google session" do
       before do
         allow(double_file).to receive(:export_as_file).with("/My_Title.docx", "docx")
+        file_types = (UndriveGoogle::FILE_TYPES - [:zip])
+        file_types.each do |type|
+          allow(double_file).to receive(:export_as_file).with("/My_Title.#{type}", type)
+        end
+        UndriveGoogle::Options.instance.extensions = file_types
       end
     end
 

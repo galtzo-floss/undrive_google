@@ -9,10 +9,17 @@ GIT
       googleauth (>= 0.5.0, < 1.0.0)
       nokogiri (>= 1.5.3, < 2.0.0)
 
+GIT
+  remote: https://github.com/rubyzip/rubyzip
+  revision: 750d3723806a3bf8f8f9bd69cb98dfd1133493eb
+  branch: master
+  specs:
+    rubyzip (3.0.0)
+
 PATH
   remote: .
   specs:
-    undrive_google (1.0.0)
+    undrive_google (1.0.1)
       google_drive (~> 3.0)
       version_gem (~> 1.1, >= 1.1.1)
 
@@ -106,7 +113,7 @@ GEM
     rspec-expectations (3.11.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
-    rspec-mocks (3.11.1)
+    rspec-mocks (3.11.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.1)
@@ -178,6 +185,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rake
   rubocop-rspec
+  rubyzip!
   simplecov
   simplecov-cobertura
   simplecov-json

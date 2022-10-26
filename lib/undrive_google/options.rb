@@ -10,18 +10,7 @@ module UndriveGoogle
                   :dir, :verbose
 
     def initialize
-      self.config_yaml = CONFIG_YAML_PATH
-      self.key_file = KEY_FILE_PATH
-      self.file_id = nil
-      self.file_by = :key
-      self.extensions = FILE_TYPES # On the command line, "all" expands to FILE_TYPES
-      self.unzip, self.keep_zip = true
-      self.rename = {}
-      self.rename_proc = RENAME_PROC
-      self.title, self.dir = nil
-      self.lang = "en"
-      self.verbose = false
-      load_yaml
+      load_yaml(true)
     end
 
     def define_options(parser)
@@ -125,13 +114,13 @@ module UndriveGoogle
     end
 
     def lang_option(parser)
-      parser.on("-l", "--lang LANG", String, '[NOOP] TODO: Add lang="LANG" attribute to HTML') do |lang|
+      parser.on("-l", "--lang LANG", String, 'Add lang="LANG" attribute to <html> tag of unzipped HTML') do |lang|
         self.lang = lang
       end
     end
 
     def title_option(parser)
-      parser.on("-t", "--title TITLE", String, "[NOOP] TODO: Add <title>TITLE</title> element to HTML") do |title|
+      parser.on("-t", "--title TITLE", String, "Add <title>TITLE</title> element to unzipped HTML") do |title|
         self.title = title
       end
     end
@@ -143,8 +132,22 @@ module UndriveGoogle
       end
     end
 
-    def load_yaml
-      return unless config_yaml
+    def load_yaml(reset = false)
+      if reset
+        self.config_yaml = CONFIG_YAML_PATH
+        self.key_file = KEY_FILE_PATH
+        self.file_id = nil
+        self.file_by = :key
+        self.extensions = FILE_TYPES # On the command line, "all" expands to FILE_TYPES
+        self.unzip = true
+        self.keep_zip = true
+        self.rename = {}
+        self.rename_proc = RENAME_PROC
+        self.title = nil
+        self.dir = nil
+        self.lang = "en"
+        self.verbose = false
+      end
 
       cf = ConfigFile.new(config_yaml)
       return unless cf.any?

@@ -25,8 +25,14 @@ module UndriveGoogle
     end
 
     def liberate!
-      session.file
+      Options.instance.title = session.file.title if missing_title?
       CaptiveFile.instance.liberate!
+    end
+
+    private
+
+    def missing_title?
+      Options.instance.title.nil? || Options.instance.title.empty?
     end
   end
 end

@@ -14,7 +14,7 @@ If yes, DO NOT use this gem. Instead follow [these instructions](https://support
 OTOH, if you want to "own", host, track, etc your 'own' files
 (e.g. your resume), DO use this gem.
 
-## NOTE: Export epub
+## NOTE: Export epub & Unzip html
 
 There is a bug (missing feature) in `google_drive` gem preventing export of epub.  You can use this patched branch:
 
@@ -25,13 +25,19 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
 ```
 
-Then ensure the script will use the Gemfile 
+Please upvote this PR [#427](https://github.com/gimite/google-drive-ruby/pull/427)!
+
+Separately, the `rubyzip` maintainers are now working on v3, and this gem utilizes that syntax.  But it hasn't been released yet.
+Therefore, if you need to unzip to HTML add another line to the `Gemfile` from above:
+```ruby
+gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
+```
+
+When liberating your files, ensure the script will use the Gemfile:
 ```shell
 BUNDLE_GEMFILE=path/to/Gemfile bundle update
 BUNDLE_GEMFILE=path/to/Gemfile undrive_google -c path/to/config
 ```
-
-And you can upvote this PR [#427](https://github.com/gimite/google-drive-ruby/pull/427).
 
 ## Story Time
 
@@ -44,7 +50,7 @@ Tell me if you've heard this one already.
 1. Give 🐭 your 🍪 for "safe-keeping"
 2. Recognizing this SPoF, you ask 🐭 to give back a 🍪 copy
 3. "I'll run it through my 🍪 🖨", says 🐭
-4. 🖨 replicates various 🍪 extensions: `pdf`, `odt`, `docx`, `txt`, `rtf` and `epub`
+4. 🖨 replicates various 🍪 extensions: `pdf`, `odt`, `docx`, `txt`, `rtf`, `zip`, and `epub`
 5. Rename 🍪 for web (e.g. replace ` ` with `_`)
 6. Extract replicated `.zip` format to `.html`
 7. Rename extracted HTML file for self-hosting
@@ -56,11 +62,8 @@ Tell me if you've heard this one already.
 13. Bake a new 🍪
 14. GOTO 1
 
-This gem solves the classic 🐭-🍪 problem by automating steps 3-8.
+This gem solves the classic 🐭-🍪 problem by automating steps 3-9.
 Will save at least 15 minutes each loop.
-
-TODO:
-Configuration supports step 9, but it hasn't been implemented yet.
 
 Note that it doesn't have to be a resume.
 There are likely other use cases that apply.
@@ -140,7 +143,8 @@ keep_zip: true
 
 # Rename downloaded files following a pattern?
 # Only applies to files not explicitly specified with rename-<type>
-# Value will be splatted to gsub
+# Will never apply to the html file unzipped from the .zip
+# Used as: file_name.gsub(rename_pattern[0], rename_pattern[1])
 rename_pattern:
   - "_"
   - " "
@@ -150,13 +154,10 @@ dir: '' # defaults to current working directory
 
 verbose: true # or false
 
-#
-# TODO: implementation for title and lang
-#
-# [String] HTML title element inner text.
+# [String] Set inner text of missing title element, if unzipping `.zip` to `.html`.
 title: '' # When empty, defaults to the title of the file.
 
-# [String] If unzipping `.zip`, adds lang attribute to html tag,
+# [String] Adds lang attribute to html tag, If unzipping `.zip` to `.html`,
 #            value is like `fr`, `es`, etc.
 lang: 'en'
 ```

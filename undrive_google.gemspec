@@ -3,7 +3,12 @@
 require_relative "lib/undrive_google/version"
 
 Gem::Specification.new do |spec|
+  # google_drive's epub support is missing, so if you need it, add to your Gemfile:
+  #   gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   spec.add_dependency("google_drive", "~> 3.0")
+  # rubyzip v3 is unreleased, so add to your Gemfile:
+  #   gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
+  # spec.add_dependency("rubyzip", "~> 3.0")
   spec.add_dependency("version_gem", ["~> 1.1", ">= 1.1.1"])
 
   spec.cert_chain = ["certs/pboling.pem"]

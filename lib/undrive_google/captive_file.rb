@@ -10,9 +10,9 @@ module UndriveGoogle
     def liberate!
       @exports = []
       extensions.each do |format|
-        download = Actions::Download.new(format)
-        exports << download
-        download.download!
+        liberate = Actions::Liberate.new(format)
+        exports << liberate.file_path
+        liberate.liberate!
       end
 
       nil
