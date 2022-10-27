@@ -14,7 +14,7 @@ end
 require "version_gem"
 require "google_drive"
 gd_fixed = GoogleDrive::Util::EXT_TO_CONTENT_TYPE.key?('.epub')
-warn "[WARN] Your version of google_drive does not support .epub. If you need .epub support see: https://sr.ht/~galtzo/undrive_google/#note-export-epub" unless gd_fixed
+warn "[WARN] Your version of google_drive does not support .epub. If you need .epub support see: https://sr.ht/~galtzo/undrive_google/#note-export-epub-amp-unzip-html" unless gd_fixed
 
 require_relative "undrive_google/version"
 
