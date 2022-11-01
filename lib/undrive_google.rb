@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 # Std-lib
-require "psych" # The Ruby YAML library
+require "fileutils" # The Ruy File Utilities Library
 require "forwardable" # The Ruby Delegation library
+require "optparse" # The Ruby CLI Options Parsing library
+require "psych" # The Ruby YAML library
 require "singleton" # The Ruby Singleton library
 
 # third party gems
@@ -13,13 +15,16 @@ rescue LoadError
 end
 require "version_gem"
 require "google_drive"
-gd_fixed = GoogleDrive::Util::EXT_TO_CONTENT_TYPE.key?('.epub')
-warn "[WARN] Your version of google_drive does not support .epub. If you need .epub support see: https://sr.ht/~galtzo/undrive_google/#note-export-epub-amp-unzip-html" unless gd_fixed
+HAS_EPUB = GoogleDrive::Util::EXT_TO_CONTENT_TYPE.key?(".epub")
+unless HAS_EPUB
+  warn "[WARN] Your version of google_drive does not support .epub. If you need .epub support see: https://sr.ht/~galtzo/undrive_google/#note-export-epub-amp-unzip-html"
+end
 
 require_relative "undrive_google/version"
 
 require_relative "undrive_google/helpers/parse"
 require_relative "undrive_google/actions/liberate"
+require_relative "undrive_google/actions/sweep"
 require_relative "undrive_google/transformations/delete_zip"
 require_relative "undrive_google/transformations/download"
 require_relative "undrive_google/transformations/fix_html"
@@ -39,7 +44,15 @@ module UndriveGoogle
     title: :title,
     key: :key
   }.freeze
-  FILE_TYPES = %i[docx odt rtf pdf txt zip epub].freeze
+  # epub is conditionally in DL_FILE_TYPES depending on the google_drive gem used.
+  DL_FILE_TYPES = if HAS_EPUB
+                    %i[docx odt rtf pdf txt zip epub].freeze
+                  else
+                    %i[docx odt rtf pdf txt zip].freeze
+                  end
+  # html is not in DL_FILE_TYPES because you can't download it directly.
+  # html is downloaded as zip, and must then be unzipped.
+  ALL_FILE_TYPES = DL_FILE_TYPES + %i[html].freeze
   RENAME_PROC = ->(orig) { orig.tr(" ", "_") }
   YAML_KEYS = %i[
     key_file
@@ -52,6 +65,7 @@ module UndriveGoogle
     title
     dir
     lang
+    sweep
     verbose
   ].freeze
   CONFIG_YAML_PATH = "undrive_google.yaml"

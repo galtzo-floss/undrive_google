@@ -21,6 +21,9 @@ module UndriveGoogle
           rename[key.to_sym] = @args.delete(k.to_sym)
         end
       end
+      @args[:dir] = @args[:dir].strip if key?(:dir)
+      @args[:lang] = @args[:lang].strip if key?(:lang)
+      @args[:title] = @args[:title].strip if key?(:title)
       @args[:extensions] = Helpers::Parse.extensions(@args[:extensions]) if key?(:extensions)
       rename_pattern = @args.delete(:rename_pattern)
       @args[:rename_proc] = Helpers::Parse.rename_proc(rename_pattern) if rename_pattern
@@ -48,7 +51,7 @@ module UndriveGoogle
 
     def validate(config)
       unknown = config.keys - YAML_KEYS
-      unknown.reject! { |key| key.start_with?("rename") }
+      unknown -= ALL_FILE_TYPES.map { |f| "rename_#{f}".to_sym }
       return if unknown.empty?
 
       raise UndriveGoogle::Error, "Unhandled config keys #{unknown.inspect}"

@@ -19,7 +19,7 @@ GIT
 PATH
   remote: .
   specs:
-    undrive_google (1.0.2)
+    undrive_google (1.0.3)
       google_drive (~> 3.0)
       version_gem (~> 1.1, >= 1.1.1)
 

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 module UndriveGoogle
-  class Transformation < Struct.new(:download,
-                                    :unzip,
-                                    :fix_html,
-                                    :rename_html,
-                                    :delete_zip,
-                                    keyword_init: true)
+  Transformation = Struct.new(:download,
+                              :unzip,
+                              :fix_html,
+                              :rename_html,
+                              :delete_zip,
+                              keyword_init: true) do
     def liberate!
       each(&:process)
     end

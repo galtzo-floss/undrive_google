@@ -7,7 +7,7 @@ module UndriveGoogle
 
     attr_accessor :config_yaml, :key_file, :file_id, :file_by, :extensions, :unzip,
                   :keep_zip, :rename, :rename_proc, :lang, :title,
-                  :dir, :verbose
+                  :dir, :sweep, :verbose
 
     def initialize
       load_yaml(true)
@@ -31,6 +31,7 @@ module UndriveGoogle
       dir_option(parser)
       lang_option(parser)
       title_option(parser)
+      sweep_option(parser)
       verbose_option(parser)
 
       parser.separator ""
@@ -96,7 +97,7 @@ module UndriveGoogle
     end
 
     def rename_options(parser)
-      (FILE_TYPES + [:html]).each do |ft|
+      ALL_FILE_TYPES.each do |ft|
         parser.on("--rename-#{ft} [FILENAME]", "Rename #{ft} to FILENAME") do |rename|
           self.rename[ft] = rename
         end
@@ -109,19 +110,27 @@ module UndriveGoogle
     def dir_option(parser)
       parser.on("-d", "--dir PATH", String,
                 "Path to directory where liberated files will go") do |dir|
-        self.dir = dir
+        self.dir = dir.strip
       end
     end
 
     def lang_option(parser)
       parser.on("-l", "--lang LANG", String, 'Add lang="LANG" attribute to <html> tag of unzipped HTML') do |lang|
-        self.lang = lang
+        self.lang = lang.strip
       end
     end
 
     def title_option(parser)
       parser.on("-t", "--title TITLE", String, "Add <title>TITLE</title> element to unzipped HTML") do |title|
-        self.title = title
+        self.title = title.strip
+      end
+    end
+
+    def sweep_option(parser)
+      # Boolean switch.
+      parser.on("-s", "--[no-]sweep",
+                "Delete all files from directory specified by -d or --dir prior to liberation") do |sweep|
+        self.sweep = sweep
       end
     end
 
@@ -138,7 +147,7 @@ module UndriveGoogle
         self.key_file = KEY_FILE_PATH
         self.file_id = nil
         self.file_by = :key
-        self.extensions = FILE_TYPES # On the command line, "all" expands to FILE_TYPES
+        self.extensions = DL_FILE_TYPES # "all" expands to FILE_TYPES
         self.unzip = true
         self.keep_zip = true
         self.rename = {}
@@ -146,6 +155,7 @@ module UndriveGoogle
         self.title = nil
         self.dir = nil
         self.lang = "en"
+        self.sweep = false
         self.verbose = false
       end
 

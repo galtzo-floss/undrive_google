@@ -8,13 +8,13 @@ module UndriveGoogle
 
       def extensions(val)
         if val.is_a?(Array)
-          unknown = val.map(&:to_sym) - FILE_TYPES
+          unknown = val.map(&:to_sym) - DL_FILE_TYPES
           raise UndriveGoogle::Error, "Unknown extensions: #{unknown}" if unknown.any?
 
           val
         elsif val == "all"
-          FILE_TYPES
-        elsif FILE_TYPES.include?(val.to_sym)
+          DL_FILE_TYPES
+        elsif DL_FILE_TYPES.include?(val.to_sym)
           [val]
         else
           raise UndriveGoogle::Error, "Unknown extensions: #{val}"

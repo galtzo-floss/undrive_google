@@ -33,11 +33,47 @@ Therefore, if you need to unzip to HTML add another line to the `Gemfile` from a
 gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
 ```
 
-When liberating your files, ensure the script will use the Gemfile:
+When liberating your files, ensure the script will use the Gemfile if it isn't in the same directory where you are running the `undrive_google` command:
 ```shell
 BUNDLE_GEMFILE=path/to/Gemfile bundle update
 BUNDLE_GEMFILE=path/to/Gemfile undrive_google -c path/to/config
 ```
+
+My complete `Gemfile` looks like this:
+```ruby
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
+
+gem "undrive_google", "~> 1.0.3"
+
+# See: https://github.com/gimite/google-drive-ruby/pull/427
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+
+# See: https://github.com/rubyzip/rubyzip#updating-to-version-30
+gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
+```
+
+My config file looks like this (sanitized a bit):
+```yaml
+file_id: "the-key-to-my-google-drive-file(find-in-the-url)" 
+key_file: serviceid-1234567890.json
+dir: /my/path/to/my/cv
+rename_html: resume.html
+rename_pattern:
+  - " "
+  - "_"
+extensions: zip
+keep_zip: true
+unzip: true
+verbose: true
+sweep: true
+```
+
+The liberated files get published at [https://railsbling.com/cv](https://railsbling.com/cv).
 
 ## Story Time
 

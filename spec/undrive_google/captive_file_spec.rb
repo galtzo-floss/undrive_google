@@ -15,7 +15,7 @@ RSpec.describe UndriveGoogle::CaptiveFile do
     include_context "with google session" do
       before do
         allow(double_file).to receive(:export_as_file).with("/My_Title.docx", "docx")
-        file_types = (UndriveGoogle::FILE_TYPES - [:zip])
+        file_types = (UndriveGoogle::DL_FILE_TYPES - [:zip])
         file_types.each do |type|
           allow(double_file).to receive(:export_as_file).with("/My_Title.#{type}", type)
         end
@@ -25,6 +25,21 @@ RSpec.describe UndriveGoogle::CaptiveFile do
 
     it "does not raise error" do
       block_is_expected.not_to raise_error
+    end
+
+    context "when sweeping" do
+      let(:parser) { OptionParser.new }
+      let(:dir) { "spec/fixtures/tmp_empty" }
+      let(:args) { ["-d", dir, "--sweep"] }
+
+      before do
+        UndriveGoogle::Options.instance.define_options(parser)
+        parser.parse!(args)
+      end
+
+      it "does not raise error" do
+        block_is_expected.not_to raise_error
+      end
     end
   end
 end

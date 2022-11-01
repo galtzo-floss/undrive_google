@@ -10,6 +10,7 @@ module UndriveGoogle
 
       def_delegator :@unzip, :html_path
 
+      # @param unzip [UndriveGoogle::Transformations::Unzip]
       def initialize(unzip)
         @unzip = unzip
       end

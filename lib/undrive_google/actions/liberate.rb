@@ -25,7 +25,7 @@ module UndriveGoogle
 
         if Options.instance.unzip
           @tr.unzip = Transformations::Unzip.new(@file_path)
-          @tr.fix_html = Transformations::FixHtml.new(@tr.unzip)
+          @tr.fix_html = Transformations::FixHtml.new(@tr.unzip) if Options.instance.lang || Options.instance.title
           @tr.rename_html = Transformations::RenameHtml.new(@tr.unzip) if Options.instance.rename[:html]
         end
 
@@ -42,7 +42,7 @@ module UndriveGoogle
         exact_name = Options.instance.rename[extension]
         return exact_name if exact_name
 
-        Options.instance.rename_proc.call(file.title)
+        Options.instance.rename[extension] = Options.instance.rename_proc.call(file.title)
       end
 
       # The zip is an HTML file packaged in a .zip archive

@@ -28,7 +28,7 @@ RSpec.describe UndriveGoogle::Helpers::Parse do
 
       it "returns an Array" do
         expect(extensions).to be_a(Array)
-        expect(extensions).to eq(UndriveGoogle::FILE_TYPES)
+        expect(extensions).to eq(UndriveGoogle::DL_FILE_TYPES)
       end
     end
 

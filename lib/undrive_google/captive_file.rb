@@ -8,10 +8,11 @@ module UndriveGoogle
 
     # @return nil
     def liberate!
+      sweep! if Options.instance.sweep
       @exports = []
       extensions.each do |format|
         liberate = Actions::Liberate.new(format)
-        exports << liberate.file_path
+        @exports << liberate.file_path
         liberate.liberate!
       end
 
@@ -19,6 +20,11 @@ module UndriveGoogle
     end
 
     private
+
+    def sweep!
+      sweep = Actions::Sweep.new
+      sweep.sweep!
+    end
 
     def extensions
       Options.instance.extensions
