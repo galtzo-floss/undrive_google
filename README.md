@@ -36,7 +36,11 @@ gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
 When liberating your files, ensure the script will use the Gemfile if it isn't in the same directory where you are running the `undrive_google` command:
 ```shell
 BUNDLE_GEMFILE=path/to/Gemfile bundle update
-BUNDLE_GEMFILE=path/to/Gemfile undrive_google -c path/to/config
+BUNDLE_GEMFILE=path/to/Gemfile bundle exec undrive_google -c path/to/config
+```
+NOTE: If the Gemfile and the config are in the same, current, directory, you can simply run:
+```shell
+bundle exec undrive_google
 ```
 
 My complete `Gemfile` looks like this:
@@ -57,7 +61,7 @@ gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-m
 gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
 ```
 
-My config file looks like this (sanitized a bit):
+My `undrive_google.yml` config file looks like this (sanitized a bit):
 ```yaml
 file_id: "the-key-to-my-google-drive-file(find-in-the-url)" 
 key_file: serviceid-1234567890.json
