@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## 1.0.4 - 2022-11-29
+### Added
+- Integration test for unzip transformation with complex zip file (Peter's Resume!)
+
 ## 1.0.3 - 2022-11-01
 ### Added
 - Support for sweep option

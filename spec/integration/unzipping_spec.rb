@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 RSpec.describe UndriveGoogle::Transformations::Unzip do
-  subject(:instance) { described_class.new(file_path) }
+  subject(:instance) { described_class.new(file_path, destination) }
 
-  let(:file_path) { "tmp/my.zip" }
+  let(:file_path) { "spec/fixtures/Peter_Boling_Resume_2022.11.29.zip" }
+  let(:destination) { "spec/tmp/unzip_integration" }
 
   let(:parser) { OptionParser.new }
   let(:args) { ["--no-verbose"] }
@@ -24,7 +25,7 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
     let(:args) { ["-u", "--no-verbose"] }
 
     it "Unzips file" do
-      allow(Zip::File).to receive(:open).with(file_path)
+      allow(Zip::File).to receive(:open).with(file_path).and_call_original
       process
       expect(Zip::File).to have_received(:open).with(file_path)
     end
@@ -48,7 +49,7 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
       end
 
       it "Unzips file" do
-        allow(Zip::File).to receive(:open).with(file_path)
+        allow(Zip::File).to receive(:open).with(file_path).and_call_original
         process
         expect(Zip::File).to have_received(:open).with(file_path)
       end
