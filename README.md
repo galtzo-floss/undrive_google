@@ -52,7 +52,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
-gem "undrive_google", "~> 1.1.0"
+gem "undrive_google", "~> 1.1"
 
 # See: https://github.com/gimite/google-drive-ruby/pull/427
 gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
