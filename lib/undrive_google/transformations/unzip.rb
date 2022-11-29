@@ -27,9 +27,10 @@ module UndriveGoogle
       def extract_zip(file, destination)
         Zip::File.open(file) do |zip_file|
           zip_file.each do |f|
-            @html_path = File.join(destination, f.name)
-            FileUtils.mkdir_p(File.dirname(@html_path))
-            zip_file.extract(f, @html_path) unless File.exist?(@html_path)
+            path = File.join(destination, f.name)
+            FileUtils.mkdir_p(File.dirname(path))
+            zip_file.extract(f, path) unless File.exist?(path)
+            @html_path = path if File.extname(path) == ".html"
           end
         end
       end

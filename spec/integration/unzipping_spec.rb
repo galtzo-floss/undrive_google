@@ -30,6 +30,10 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
       expect(Zip::File).to have_received(:open).with(file_path)
     end
 
+    it "sets html_path" do
+      block_is_expected.to change(instance, :html_path).from(nil).to("spec/tmp/unzip_integration/PeterBolingResume2022.11.29.html")
+    end
+
     context "without unzip" do
       let(:args) { ["--no-unzip"] }
 
