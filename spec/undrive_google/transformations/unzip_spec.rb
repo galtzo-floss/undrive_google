@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 RSpec.describe UndriveGoogle::Transformations::Unzip do
-  subject(:instance) { described_class.new(file_path) }
+  subject(:instance) { described_class.new(file_path, destination) }
 
-  let(:file_path) { "tmp/my.zip" }
+  let(:file_path) { "spec/fixtures/fake.zip" }
+  let(:destination) { "spec/tmp/fake" }
 
   let(:parser) { OptionParser.new }
   let(:args) { ["--no-verbose"] }
@@ -17,6 +18,13 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
     it "does not error" do
       block_is_expected.not_to raise_error
     end
+    context "without destination specified" do
+      let(:destination) { nil }
+
+      it "does not error" do
+        block_is_expected.not_to raise_error
+      end
+    end
   end
 
   describe "#process" do
@@ -27,6 +35,16 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
       allow(Zip::File).to receive(:open).with(file_path)
       process
       expect(Zip::File).to have_received(:open).with(file_path)
+    end
+
+    context "without destination specified" do
+      let(:destination) { nil }
+
+      it "Unzips file" do
+        allow(Zip::File).to receive(:open).with(file_path)
+        process
+        expect(Zip::File).to have_received(:open).with(file_path)
+      end
     end
 
     context "without unzip" do

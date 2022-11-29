@@ -22,12 +22,13 @@ RSpec.describe UndriveGoogle::ConfigFile do
       expect(instance[:dir]).to eq("tmp")
     end
 
-    it "does not have rename_txt" do
-      expect(instance.key?(:rename_txt)).to be(false)
+    it "does not have rename" do
+      expect(instance.key?(:rename)).to be(false)
     end
 
-    it "does not have rename_zip" do
-      expect(instance.key?(:rename_zip)).to be(false)
+    # Prevent regression where rename_<type> fails to get mapped to hash
+    it "does not have rename_txt" do
+      expect(instance.key?(:rename_txt)).to be(false)
     end
 
     context "when no file at path" do
@@ -49,12 +50,13 @@ RSpec.describe UndriveGoogle::ConfigFile do
         expect(instance.key?(:dir)).to be(false)
       end
 
-      it "does not have rename_txt" do
-        expect(instance.key?(:rename_txt)).to be(false)
+      it "does not have rename" do
+        expect(instance.key?(:rename)).to be(false)
       end
 
-      it "does not have rename_zip" do
-        expect(instance.key?(:rename_zip)).to be(false)
+      # Prevent regression where rename_<type> fails to get mapped to hash
+      it "does not have rename_txt" do
+        expect(instance.key?(:rename_txt)).to be(false)
       end
     end
 
@@ -78,11 +80,11 @@ RSpec.describe UndriveGoogle::ConfigFile do
       end
 
       it "has rename[:txt]" do
-        expect(instance[:rename][:txt]).to eq("a_text_file.txt")
+        expect(instance[:rename][:txt]).to eq("a_txt_file.txt")
       end
 
       it "has rename[:zip]" do
-        expect(instance[:rename][:zip]).to eq("a_zip_archive.zip")
+        expect(instance[:rename][:zip]).to eq("a_zip_file.zip")
       end
 
       it "has rename_proc" do

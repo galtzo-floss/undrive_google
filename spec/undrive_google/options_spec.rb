@@ -48,6 +48,46 @@ RSpec.describe UndriveGoogle::Options do
         it "sets config_yaml" do
           block_is_expected.to change(instance, :config_yaml).from("undrive_google.yaml").to("asdf.yaml")
         end
+
+        context "when in full effect" do
+          let(:args) { ["--config-yaml", "spec/fixtures/renames.yaml"] }
+
+          it "does not error" do
+            block_is_expected.not_to raise_error
+          end
+
+          it "sets config_yaml" do
+            block_is_expected.to change(instance, :config_yaml).from("undrive_google.yaml").to("spec/fixtures/renames.yaml")
+          end
+
+          (UndriveGoogle::ALL_FILE_TYPES - [:txt, :zip]).each do |type|
+            context "when rename_#{type} not specified" do
+              let(:replace) { "file_name.#{type}" }
+
+              it "does not error" do
+                block_is_expected.not_to raise_error
+              end
+
+              it "does not set rename_#{type}" do
+                block_is_expected.to_not change { instance.rename[type] }.from(nil)
+              end
+            end
+          end
+
+          [:txt, :zip].each do |type|
+            context "when rename_#{type} is specified" do
+              let(:replace) { "a_#{type}_file.#{type}" }
+
+              it "does not error" do
+                block_is_expected.not_to raise_error
+              end
+
+              it "sets rename_#{type}" do
+                block_is_expected.to change { instance.rename[type] }.from(nil).to(replace)
+              end
+            end
+          end
+        end
       end
 
       context "when key-file" do
@@ -145,6 +185,35 @@ RSpec.describe UndriveGoogle::Options do
 
         it "sets dir" do
           block_is_expected.to change(instance, :dir).from("tmp").to("my/path")
+        end
+      end
+
+      UndriveGoogle::ALL_FILE_TYPES.each do |type|
+        context "when --rename-#{type}" do
+          let(:replace) { "file_name.#{type}" }
+          let(:args) { ["--rename-#{type}", replace] }
+
+          it "does not error" do
+            block_is_expected.not_to raise_error
+          end
+
+          it "sets rename_#{type}" do
+            block_is_expected.to change { instance.rename[type] }.from(nil).to(replace)
+          end
+        end
+      end
+
+      context "when --rename-pattern" do
+        let(:pattern) { " " }
+        let(:replace) { "_" }
+        let(:args) { ["--rename-pattern", "#{pattern},#{replace}"] }
+
+        it "does not error" do
+          block_is_expected.not_to raise_error
+        end
+
+        it "sets rename_proc" do
+          block_is_expected.to change(instance, :rename_proc).from(nil).to(Proc)
         end
       end
 

@@ -185,9 +185,10 @@ keep_zip: true
 # Only applies to files not explicitly specified with rename-<type>
 # Will never apply to the html file unzipped from the .zip
 # Used as: file_name.gsub(rename_pattern[0], rename_pattern[1])
-rename_pattern:
-  - "_"
-  - " "
+# By default, no renaming, must be specified
+# rename_pattern:
+#   - "_"
+#   - " "
 
 # [PATH]
 dir: '' # defaults to current working directory

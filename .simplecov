@@ -5,6 +5,7 @@ SimpleCov.start do
   primary_coverage :branch
   add_filter "spec"
   add_filter "sig"
+  add_filter "lib/undrive_google.rb"
   add_filter "lib/undrive_google/version.rb"
   add_filter "exe/undrive_google"
   track_files "**/*.rb"

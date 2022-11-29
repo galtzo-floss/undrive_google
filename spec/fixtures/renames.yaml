@@ -1,8 +1,8 @@
 file_id: bart
 key_file: splatter.json
 dir: furtive
-rename_txt: a_text_file.txt
-rename_zip: a_zip_archive.zip
+rename_txt: a_txt_file.txt
+rename_zip: a_zip_file.zip
 rename_pattern:
   - "old_and_busted"
   - "new_hotness"

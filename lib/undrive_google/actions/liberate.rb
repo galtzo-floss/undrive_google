@@ -41,6 +41,7 @@ module UndriveGoogle
       def rename
         exact_name = Options.instance.rename[extension]
         return exact_name if exact_name
+        return file.title unless Options.instance.rename_proc
 
         Options.instance.rename[extension] = Options.instance.rename_proc.call(file.title)
       end

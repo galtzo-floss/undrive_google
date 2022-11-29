@@ -151,7 +151,7 @@ module UndriveGoogle
         self.unzip = true
         self.keep_zip = true
         self.rename = {}
-        self.rename_proc = RENAME_PROC
+        self.rename_proc = nil
         self.title = nil
         self.dir = nil
         self.lang = "en"

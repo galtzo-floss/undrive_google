@@ -10,9 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## 1.0.4 - 2022-11-29
+## 1.1.0 - 2022-11-29
 ### Added
 - Integration test for unzip transformation with complex zip file (Peter's Resume!)
+### Changed
+- rename_proc now defaults to `nil` (meaning not renaming)
+  - Set it you need files renamed according to a pattern
 ### Fixed
 - Support HTML zip archives that have assets (e.g. /images/*)
 
