@@ -29,10 +29,6 @@ NOTE: You will need to have a public key in `certs/`, and list your cert in the
 `gemspec`, in order to sign the new release.
 See: [RubyGems Security Guide][rubygems-security-guide]
 
-## Contributors
-
-[![Contributors][🖐contributors-img]][🖐contributors]
-
 [comment]: <> (Following links are used by README, CONTRIBUTING, Homepage)
 
 [conduct]: https://git.sr.ht/~galtzo/undrive_google/tree/main/item/CODE_OF_CONDUCT.md
