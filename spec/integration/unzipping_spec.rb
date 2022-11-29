@@ -38,6 +38,10 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
         process
         expect(Zip::File).to_not have_received(:open)
       end
+
+      it "does not set html_path" do
+        block_is_expected.to_not change(instance, :html_path).from(nil)
+      end
     end
 
     context "with verbose" do
@@ -52,6 +56,10 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
         allow(Zip::File).to receive(:open).with(file_path).and_call_original
         process
         expect(Zip::File).to have_received(:open).with(file_path)
+      end
+
+      it "sets html_path" do
+        block_is_expected.to change(instance, :html_path).from(nil).to("spec/tmp/unzip_integration/PeterBolingResume2022.11.29.html")
       end
     end
   end
