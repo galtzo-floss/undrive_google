@@ -4,10 +4,11 @@ module UndriveGoogle
   module Transformations
     # Download a particular version of the file.
     class Unzip
-      attr_accessor :file_path, :html_path
+      attr_accessor :file_path, :html_path, :destination
 
-      def initialize(file_path)
+      def initialize(file_path, destination = nil)
         @file_path = file_path
+        @destination = destination || File.dirname(file_path)
       end
 
       # @return nil
@@ -23,16 +24,11 @@ module UndriveGoogle
 
       private
 
-      def destination
-        File.dirname(file_path)
-      end
-
       def extract_zip(file, destination)
-        FileUtils.mkdir_p(destination)
-
         Zip::File.open(file) do |zip_file|
           zip_file.each do |f|
             @html_path = File.join(destination, f.name)
+            FileUtils.mkdir_p(File.dirname(@html_path))
             zip_file.extract(f, @html_path) unless File.exist?(@html_path)
           end
         end

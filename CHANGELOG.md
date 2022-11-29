@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.4 - 2022-11-29
 ### Added
 - Integration test for unzip transformation with complex zip file (Peter's Resume!)
+### Fixed
+- Support HTML zip archives that have assets (e.g. /images/*)
 
 ## 1.0.3 - 2022-11-01
 ### Added
