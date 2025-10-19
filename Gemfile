@@ -2,17 +2,14 @@
 
 source "https://gem.coop"
 
-git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
+git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
-eval_gemfile "gemfiles/modular/debug.gemfile"
-eval_gemfile "gemfiles/modular/coverage.gemfile"
-eval_gemfile "gemfiles/modular/style.gemfile"
-eval_gemfile "gemfiles/modular/documentation.gemfile"
-eval_gemfile "gemfiles/modular/optional.gemfile"
-eval_gemfile "gemfiles/modular/x_std_libs.gemfile"
+#### IMPORTANT #######################################################
+# Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
+####################################################### IMPORTANT ####
 
-# Specify your gem's dependencies in undrive_google.gemspec
+# Include dependencies from <gem name>.gemspec
 gemspec
 
 # See: https://github.com/gimite/google-drive-ruby/pull/427
@@ -22,3 +19,21 @@ gem "rubyzip", "~> 3.2"
 
 # ex std-lib
 gem "logger"
+
+# Debugging
+eval_gemfile "gemfiles/modular/debug.gemfile"
+
+# Code Coverage
+eval_gemfile "gemfiles/modular/coverage.gemfile"
+
+# Linting
+eval_gemfile "gemfiles/modular/style.gemfile"
+
+# Documentation
+eval_gemfile "gemfiles/modular/documentation.gemfile"
+
+# Optional
+eval_gemfile "gemfiles/modular/optional.gemfile"
+
+### Std Lib Extracted Gems
+eval_gemfile "gemfiles/modular/x_std_libs.gemfile"

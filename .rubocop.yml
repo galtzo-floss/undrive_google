@@ -1,22 +1,13 @@
-inherit_from: .rubocop_todo.yml
-
 inherit_gem:
-  rubocop-lts: rubocop-lts.yml
+  rubocop-lts: config/rubygem_rspec.yml
 
-require:
-  - 'rubocop-md'
-  - 'rubocop-packaging'
-  - 'rubocop-performance'
-  - 'rubocop-rake'
-  - 'rubocop-rspec'
+inherit_from:
+  - .rubocop_rspec.yml
 
-Style/StringLiterals:
+plugins: rubocop-on-rbs
+
+RBS:
   Enabled: true
-  EnforcedStyle: double_quotes
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
+Layout/IndentationConsistency:
+  Exclude: ['*.md']

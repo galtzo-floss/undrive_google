@@ -1,21 +1,11 @@
-# frozen_string_literal: true
+require "kettle/soup/cover/config"
 
+# Minimum coverage thresholds are set by kettle-soup-cover.
+# It is controlled by ENV variables, which are set in .envrc and loaded via `direnv allow`
+# If the values for minimum coverage need to change, they should be changed both there,
+#   and in 2 places in .github/workflows/coverage.yml.
 SimpleCov.start do
-  enable_coverage :branch
-  primary_coverage :branch
-  add_filter "spec"
-  add_filter "sig"
-  add_filter "lib/undrive_google.rb"
-  add_filter "lib/undrive_google/version.rb"
-  add_filter "exe/undrive_google"
-  track_files "**/*.rb"
-  if ALL_FORMATTERS
-    command_name "#{ENV.fetch("GITHUB_WORKFLOW",
-                              nil)} Job #{ENV.fetch("GITHUB_RUN_ID",
-                                                    nil)}:#{ENV.fetch("GITHUB_RUN_NUMBER",
-                                                                      nil)}"
-  else
-    formatter SimpleCov::Formatter::HTMLFormatter
-  end
-  minimum_coverage(line: 100, branch: 100)
+  track_files "lib/**/*.rb"
+  track_files "lib/**/*.rake"
+  track_files "exe/*.rb"
 end

@@ -15,7 +15,6 @@ Appraisal.*.gemfile.lock
 .rspec_status
 /coverage/
 /spec/reports/
-/spec/tmp/
 /results/
 .output.txt
 
@@ -48,5 +47,3 @@ Appraisal.*.gemfile.lock
 
 # Sentinels
 .floss_funding.*.lock
-
-/*.json
