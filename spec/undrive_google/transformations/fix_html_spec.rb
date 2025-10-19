@@ -4,7 +4,7 @@ RSpec.describe UndriveGoogle::Transformations::FixHtml do
   subject(:instance) { described_class.new(unzip) }
 
   let(:html_path) { "some/path.html" }
-  let(:unzip) { double(UndriveGoogle::Transformations::Unzip, html_path: html_path)}
+  let(:unzip) { double(UndriveGoogle::Transformations::Unzip, html_path: html_path) }
 
   include_context "with google session"
 
@@ -62,6 +62,7 @@ RSpec.describe UndriveGoogle::Transformations::FixHtml do
 
         context "with no lang" do
           let(:args) { ["-l", " ", "-t", title] }
+
           it "updates the html" do
             block_is_expected.to change { File.read(html_path) }.from(html).to("<html><head><title>Bounce to the Ounce</title></head><body></body></html>")
           end
@@ -69,15 +70,17 @@ RSpec.describe UndriveGoogle::Transformations::FixHtml do
 
         context "with nothing" do
           let(:args) { ["-l", " ", "-t", " "] }
+
           it "does nothing" do
-            block_is_expected.to_not change { File.read(html_path) }.from(html)
+            block_is_expected.not_to change { File.read(html_path) }.from(html)
           end
         end
 
         context "with no html" do
           let(:html) { "" }
+
           it "does nothing" do
-            block_is_expected.to_not change { File.read(html_path) }.from(html)
+            block_is_expected.not_to change { File.read(html_path) }.from(html)
           end
         end
       end

@@ -22,6 +22,7 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
 
   describe "#process" do
     subject(:process) { instance.process }
+
     let(:args) { ["-u", "--no-verbose"] }
 
     it "Unzips file" do
@@ -40,11 +41,11 @@ RSpec.describe UndriveGoogle::Transformations::Unzip do
       it "Does not unzip file" do
         allow(Zip::File).to receive(:open)
         process
-        expect(Zip::File).to_not have_received(:open)
+        expect(Zip::File).not_to have_received(:open)
       end
 
       it "does not set html_path" do
-        block_is_expected.to_not change(instance, :html_path).from(nil)
+        block_is_expected.not_to change(instance, :html_path).from(nil)
       end
     end
 

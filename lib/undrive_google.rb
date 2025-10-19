@@ -11,7 +11,7 @@ require "singleton" # The Ruby Singleton library
 begin
   require "zip"
 rescue LoadError
-  warn "[WARN] Failed to load gem rubyzip, so unzip (and thus html) options will not work."
+  warn("[WARN] Failed to load gem rubyzip, so unzip (and thus html) options will not work.")
 end
 require "version_gem"
 require "google_drive"
@@ -42,14 +42,14 @@ module UndriveGoogle
 
   FILE_BY = {
     title: :title,
-    key: :key
+    key: :key,
   }.freeze
   # epub is conditionally in DL_FILE_TYPES depending on the google_drive gem used.
   DL_FILE_TYPES = if HAS_EPUB
-                    %i[docx odt rtf pdf txt zip epub].freeze
-                  else
-                    %i[docx odt rtf pdf txt zip].freeze
-                  end
+    %i[docx odt rtf pdf txt zip epub].freeze
+  else
+    %i[docx odt rtf pdf txt zip].freeze
+  end
   # html is not in DL_FILE_TYPES because you can't download it directly.
   # html is downloaded as zip, and must then be unzipped.
   ALL_FILE_TYPES = DL_FILE_TYPES + %i[html].freeze

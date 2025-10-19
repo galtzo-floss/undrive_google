@@ -4,6 +4,7 @@ module UndriveGoogle
   # Defines the CLI behavior & provides the Google Drive Session
   class CLI
     include Singleton
+
     attr_reader :parser, :options, :session
 
     # Options specified on the command line are collected in *@options*.

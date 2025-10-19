@@ -6,7 +6,7 @@ RSpec.describe "UnDrive Google CLI" do
   let(:args) { options.map { |(k, v)| "--#{k} #{v}" }.join(" ") }
 
   context "with --help" do
-    let(:options) { { help: nil } }
+    let(:options) { {help: nil} }
 
     it_behaves_like "cli output", <<~BANNER
       Usage: undrive_google [options]

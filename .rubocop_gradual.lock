@@ -1,0 +1,14 @@
+{
+  "lib/undrive_google/options.rb:2276667178": [
+    [197, 7, 21, "Style/InvertibleUnlessCondition: Prefer `if cf.none?` over `unless cf.any?`.", 1794861023]
+  ],
+  "lib/undrive_google/transformations/fix_html.rb:420809259": [
+    [35, 9, 31, "Style/InvertibleUnlessCondition: Prefer `if html.length < 12` over `unless html.length >= 12`.", 1748495250]
+  ],
+  "spec/exe/undrive_google_cli_spec.rb:1396357036": [
+    [3, 16, 20, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 1299462397]
+  ],
+  "spec/integration/unzipping_spec.rb:3303514076": [
+    [3, 1, 52, "RSpec/SpecFilePathFormat: Spec path should end with `undrive_google/transformations/unzip*_spec.rb`.", 1273301045]
+  ]
+}

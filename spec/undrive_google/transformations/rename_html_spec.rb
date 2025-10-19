@@ -5,7 +5,7 @@ RSpec.describe UndriveGoogle::Transformations::RenameHtml do
 
   let(:dir) { "some" }
   let(:html_path) { "#{dir}/path.html" }
-  let(:unzip) { double(UndriveGoogle::Transformations::Unzip, html_path: html_path)}
+  let(:unzip) { double(UndriveGoogle::Transformations::Unzip, html_path: html_path) }
 
   include_context "with google session"
 

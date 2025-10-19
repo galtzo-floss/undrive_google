@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "🏴‍☠️ Liberate files from your Google Drive"
   spec.description = "🏴‍☠️ Liberate files from your Google Drive with transformations"
-  spec.homepage = "https://github.com/kettle-rb/undrive_google"
+  spec.homepage = "https://github.com/galtzo-floss/undrive_google"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 3.1"
 

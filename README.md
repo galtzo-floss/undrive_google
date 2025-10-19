@@ -78,14 +78,14 @@ Compatible with MRI Ruby 3.1+, and concordant releases of JRuby, and TruffleRuby
 
 | Federated [DVCS][💎d-in-dvcs] Repository        | Status                                                                | Issues                    | PRs                      | Wiki                      | CI                       | Discussions                  |
 |-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [kettle-rb/undrive_google on GitLab][📜src-gl]   | The Truth                                                             | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜gl-wiki]           | 🐭 Tiny Matrix           | ➖                            |
-| 🧊 [kettle-rb/undrive_google on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate])                             | [💚][🤝cb-issues]         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
-| 🐙 [kettle-rb/undrive_google on GitHub][📜src-gh]   | Another Mirror                                                        | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | [💚][📜gh-wiki]           | 💯 Full Matrix           | [💚][gh-discussions]         |
+| 🧪 [galtzo-floss/undrive_google on GitLab][📜src-gl]   | The Truth                                                             | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜gl-wiki]           | 🐭 Tiny Matrix           | ➖                            |
+| 🧊 [galtzo-floss/undrive_google on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate])                             | [💚][🤝cb-issues]         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
+| 🐙 [galtzo-floss/undrive_google on GitHub][📜src-gh]   | Another Mirror                                                        | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | [💚][📜gh-wiki]           | 💯 Full Matrix           | [💚][gh-discussions]         |
 | 🎮️ [Discord Server][✉️discord-invite]          | [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
 </details>
 
-[gh-discussions]: https://github.com/kettle-rb/undrive_google/discussions
+[gh-discussions]: https://github.com/galtzo-floss/undrive_google/discussions
 
 ### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/undrive_google)](https://tidelift.com/subscription/pkg/rubygems-undrive_google?utm_source=rubygems-undrive_google&utm_medium=referral&utm_campaign=readme)
 
@@ -291,7 +291,7 @@ gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
 
 My `undrive_google.yml` config file looks like this (sanitized a bit):
 ```yaml
-file_id: "the-key-to-my-google-drive-file(find-in-the-url)" 
+file_id: "the-key-to-my-google-drive-file(find-in-the-url)"
 key_file: serviceid-1234567890.json
 dir: /my/path/to/my/cv
 rename_html: resume.html
@@ -355,17 +355,17 @@ you must to a bit of initial configuration, but you already knew that.
 
 ## 🦷 FLOSS Funding
 
-While kettle-rb tools are free software and will always be, the project would benefit immensely from some funding.
+While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.
 Raising a monthly budget of... "dollars" would make the project more sustainable.
 
 We welcome both individual and corporate sponsors! We also offer a
 wide array of funding channels to account for your preferences
 (although currently [Open Collective][🖇osc] is our preferred funding platform).
 
-**If you're working in a company that's making significant use of kettle-rb tools we'd
-appreciate it if you suggest to your company to become a kettle-rb sponsor.**
+**If you're working in a company that's making significant use of galtzo-floss tools we'd
+appreciate it if you suggest to your company to become a galtzo-floss sponsor.**
 
-You can support the development of kettle-rb tools via
+You can support the development of galtzo-floss tools via
 [GitHub Sponsors][🖇sponsor],
 [Liberapay][⛳liberapay],
 [PayPal][🖇paypal],
@@ -378,7 +378,7 @@ and [Tidelift][🏙️entsup-tidelift].
 
 ### Open Collective for Individuals
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/kettle-rb#backer)]
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/galtzo-floss#backer)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -388,7 +388,7 @@ No backers yet. Be the first!
 
 ### Open Collective for Organizations
 
-Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/kettle-rb#sponsor)]
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/galtzo-floss#sponsor)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -396,7 +396,7 @@ NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day
 No sponsors yet. Be the first!
 <!-- OPENCOLLECTIVE-ORGANIZATIONS:END -->
 
-[kettle-readme-backers]: https://github.com/kettle-rb/undrive_google/blob/main/exe/kettle-readme-backers
+[kettle-readme-backers]: https://github.com/galtzo-floss/undrive_google/blob/main/exe/kettle-readme-backers
 
 ### Another way to support open-source
 
@@ -453,16 +453,16 @@ Patches are welcome on Source Hut at [https://lists.sr.ht/~galtzo/undrive_google
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/kettle-rb/undrive_google/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/galtzo-floss/undrive_google/-/graphs/main][🚎contributors-gl]
 
 <details>
     <summary>⭐️ Star History</summary>
 
-<a href="https://star-history.com/#kettle-rb/undrive_google&Date">
+<a href="https://star-history.com/#galtzo-floss/undrive_google&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=kettle-rb/undrive_google&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=kettle-rb/undrive_google&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=kettle-rb/undrive_google&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/undrive_google&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/undrive_google&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=galtzo-floss/undrive_google&type=Date" />
  </picture>
 </a>
 
@@ -541,7 +541,7 @@ To join the community or get help 👇️ Join the Discord.
 
 To say "thanks!" ☝️ Join the Discord or 👇️ send money.
 
-[![Sponsor kettle-rb/undrive_google on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay-img] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal-img]
+[![Sponsor galtzo-floss/undrive_google on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay-img] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal-img]
 
 ### Please give the project a star ⭐ ♥.
 
@@ -550,17 +550,17 @@ Thanks for RTFM. ☺️
 [⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
 [⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
 [⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇osc-all-img]: https://img.shields.io/opencollective/all/kettle-rb
-[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/kettle-rb
-[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/kettle-rb
-[🖇osc-backers]: https://opencollective.com/kettle-rb#backer
-[🖇osc-backers-i]: https://opencollective.com/kettle-rb/backers/badge.svg?style=flat
-[🖇osc-sponsors]: https://opencollective.com/kettle-rb#sponsor
-[🖇osc-sponsors-i]: https://opencollective.com/kettle-rb/sponsors/badge.svg?style=flat
-[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/kettle-rb?style=for-the-badge
-[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/kettle-rb?style=for-the-badge
-[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/kettle-rb?style=for-the-badge
-[🖇osc]: https://opencollective.com/kettle-rb
+[🖇osc-all-img]: https://img.shields.io/opencollective/all/galtzo-floss
+[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/galtzo-floss
+[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/galtzo-floss
+[🖇osc-backers]: https://opencollective.com/galtzo-floss#backer
+[🖇osc-backers-i]: https://opencollective.com/galtzo-floss/backers/badge.svg?style=flat
+[🖇osc-sponsors]: https://opencollective.com/galtzo-floss#sponsor
+[🖇osc-sponsors-i]: https://opencollective.com/galtzo-floss/sponsors/badge.svg?style=flat
+[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/galtzo-floss?style=for-the-badge
+[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/galtzo-floss?style=for-the-badge
+[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/galtzo-floss?style=for-the-badge
+[🖇osc]: https://opencollective.com/galtzo-floss
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
@@ -584,12 +584,12 @@ Thanks for RTFM. ☺️
 [✉️ruby-friends]: https://app.daily.dev/squads/rubyfriends
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: https://github.com/kettle-rb/undrive_google
+[⛳️gem-namespace]: https://github.com/galtzo-floss/undrive_google
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-UndriveGoogle-3C2D2D.svg?style=square&logo=ruby&logoColor=white
 [⛳️gem-name]: https://bestgems.org/gems/undrive_google
 [⛳️name-img]: https://img.shields.io/badge/name-undrive__google-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
-[⛳️tag-img]: https://img.shields.io/github/tag/kettle-rb/undrive_google.svg
-[⛳️tag]: http://github.com/kettle-rb/undrive_google/releases
+[⛳️tag-img]: https://img.shields.io/github/tag/galtzo-floss/undrive_google.svg
+[⛳️tag]: http://github.com/galtzo-floss/undrive_google/releases
 [🚂maint-blog]: http://www.railsbling.com/tags/undrive_google
 [🚂maint-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
 [🚂maint-contact]: http://www.railsbling.com/contact
@@ -624,55 +624,55 @@ Thanks for RTFM. ☺️
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/kettle-rb/undrive_google/
+[📜src-gl]: https://gitlab.com/galtzo-floss/undrive_google/
 [📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
-[📜src-cb]: https://codeberg.org/kettle-rb/undrive_google
+[📜src-cb]: https://codeberg.org/galtzo-floss/undrive_google
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/kettle-rb/undrive_google
+[📜src-gh]: https://github.com/galtzo-floss/undrive_google
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜gl-wiki]: https://gitlab.com/kettle-rb/undrive_google/-/wikis/home
-[📜gh-wiki]: https://github.com/kettle-rb/undrive_google/wiki
+[📜gl-wiki]: https://gitlab.com/galtzo-floss/undrive_google/-/wikis/home
+[📜gh-wiki]: https://github.com/galtzo-floss/undrive_google/wiki
 [📜gl-wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=gitlab&logoColor=white
 [📜gh-wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=github&logoColor=white
 [👽dl-rank]: https://bestgems.org/gems/undrive_google
 [👽dl-ranki]: https://img.shields.io/gem/rd/undrive_google.svg
-[👽oss-help]: https://www.codetriage.com/kettle-rb/undrive_google
-[👽oss-helpi]: https://www.codetriage.com/kettle-rb/undrive_google/badges/users.svg
+[👽oss-help]: https://www.codetriage.com/galtzo-floss/undrive_google
+[👽oss-helpi]: https://www.codetriage.com/galtzo-floss/undrive_google/badges/users.svg
 [👽version]: https://bestgems.org/gems/undrive_google
 [👽versioni]: https://img.shields.io/gem/v/undrive_google.svg
-[🏀qlty-mnt]: https://qlty.sh/gh/kettle-rb/projects/undrive_google
-[🏀qlty-mnti]: https://qlty.sh/gh/kettle-rb/projects/undrive_google/maintainability.svg
-[🏀qlty-cov]: https://qlty.sh/gh/kettle-rb/projects/undrive_google/metrics/code?sort=coverageRating
-[🏀qlty-covi]: https://qlty.sh/gh/kettle-rb/projects/undrive_google/coverage.svg
-[🏀codecov]: https://codecov.io/gh/kettle-rb/undrive_google
-[🏀codecovi]: https://codecov.io/gh/kettle-rb/undrive_google/graph/badge.svg
-[🏀coveralls]: https://coveralls.io/github/kettle-rb/undrive_google?branch=main
-[🏀coveralls-img]: https://coveralls.io/repos/github/kettle-rb/undrive_google/badge.svg?branch=main
-[🖐codeQL]: https://github.com/kettle-rb/undrive_google/security/code-scanning
-[🖐codeQL-img]: https://github.com/kettle-rb/undrive_google/actions/workflows/codeql-analysis.yml/badge.svg
-[🚎2-cov-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/coverage.yml
-[🚎2-cov-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/coverage.yml/badge.svg
-[🚎3-hd-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/heads.yml
-[🚎3-hd-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/heads.yml/badge.svg
-[🚎5-st-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/style.yml
-[🚎5-st-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/style.yml/badge.svg
-[🚎6-s-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/supported.yml
-[🚎6-s-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/supported.yml/badge.svg
-[🚎9-t-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/truffle.yml
-[🚎9-t-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/truffle.yml/badge.svg
-[🚎10-j-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/jruby.yml
-[🚎10-j-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/jruby.yml/badge.svg
-[🚎11-c-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/current.yml
-[🚎11-c-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/current.yml/badge.svg
-[🚎12-crh-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/dep-heads.yml
-[🚎12-crh-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/dep-heads.yml/badge.svg
-[🚎13-🔒️-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/locked_deps.yml
-[🚎13-🔒️-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/locked_deps.yml/badge.svg
-[🚎14-🔓️-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/unlocked_deps.yml
-[🚎14-🔓️-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/unlocked_deps.yml/badge.svg
-[🚎15-🪪-wf]: https://github.com/kettle-rb/undrive_google/actions/workflows/license-eye.yml
-[🚎15-🪪-wfi]: https://github.com/kettle-rb/undrive_google/actions/workflows/license-eye.yml/badge.svg
+[🏀qlty-mnt]: https://qlty.sh/gh/galtzo-floss/projects/undrive_google
+[🏀qlty-mnti]: https://qlty.sh/gh/galtzo-floss/projects/undrive_google/maintainability.svg
+[🏀qlty-cov]: https://qlty.sh/gh/galtzo-floss/projects/undrive_google/metrics/code?sort=coverageRating
+[🏀qlty-covi]: https://qlty.sh/gh/galtzo-floss/projects/undrive_google/coverage.svg
+[🏀codecov]: https://codecov.io/gh/galtzo-floss/undrive_google
+[🏀codecovi]: https://codecov.io/gh/galtzo-floss/undrive_google/graph/badge.svg
+[🏀coveralls]: https://coveralls.io/github/galtzo-floss/undrive_google?branch=main
+[🏀coveralls-img]: https://coveralls.io/repos/github/galtzo-floss/undrive_google/badge.svg?branch=main
+[🖐codeQL]: https://github.com/galtzo-floss/undrive_google/security/code-scanning
+[🖐codeQL-img]: https://github.com/galtzo-floss/undrive_google/actions/workflows/codeql-analysis.yml/badge.svg
+[🚎2-cov-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/heads.yml/badge.svg
+[🚎5-st-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/style.yml/badge.svg
+[🚎6-s-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/supported.yml
+[🚎6-s-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/supported.yml/badge.svg
+[🚎9-t-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/dep-heads.yml
+[🚎12-crh-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/dep-heads.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/locked_deps.yml
+[🚎13-🔒️-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/locked_deps.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/unlocked_deps.yml
+[🚎14-🔓️-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/unlocked_deps.yml/badge.svg
+[🚎15-🪪-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/license-eye.yml
+[🚎15-🪪-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/license-eye.yml/badge.svg
 [💎ruby-3.1i]: https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.2i]: https://img.shields.io/badge/Ruby-3.2-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.3i]: https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white
@@ -684,19 +684,19 @@ Thanks for RTFM. ☺️
 [💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
-[🤝gh-issues]: https://github.com/kettle-rb/undrive_google/issues
-[🤝gh-pulls]: https://github.com/kettle-rb/undrive_google/pulls
-[🤝gl-issues]: https://gitlab.com/kettle-rb/undrive_google/-/issues
-[🤝gl-pulls]: https://gitlab.com/kettle-rb/undrive_google/-/merge_requests
-[🤝cb-issues]: https://codeberg.org/kettle-rb/undrive_google/issues
-[🤝cb-pulls]: https://codeberg.org/kettle-rb/undrive_google/pulls
+[🤝gh-issues]: https://github.com/galtzo-floss/undrive_google/issues
+[🤝gh-pulls]: https://github.com/galtzo-floss/undrive_google/pulls
+[🤝gl-issues]: https://gitlab.com/galtzo-floss/undrive_google/-/issues
+[🤝gl-pulls]: https://gitlab.com/galtzo-floss/undrive_google/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/galtzo-floss/undrive_google/issues
+[🤝cb-pulls]: https://codeberg.org/galtzo-floss/undrive_google/pulls
 [🤝cb-donate]: https://donate.codeberg.org/
 [🤝contributing]: CONTRIBUTING.md
-[🏀codecov-g]: https://codecov.io/gh/kettle-rb/undrive_google/graphs/tree.svg
+[🏀codecov-g]: https://codecov.io/gh/galtzo-floss/undrive_google/graphs/tree.svg
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/kettle-rb/undrive_google/graphs/contributors
-[🖐contributors-img]: https://contrib.rocks/image?repo=kettle-rb/undrive_google
-[🚎contributors-gl]: https://gitlab.com/kettle-rb/undrive_google/-/graphs/main
+[🖐contributors]: https://github.com/galtzo-floss/undrive_google/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=galtzo-floss/undrive_google
+[🚎contributors-gl]: https://gitlab.com/galtzo-floss/undrive_google/-/graphs/main
 [🪇conduct]: CODE_OF_CONDUCT.md
 [🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
@@ -724,7 +724,7 @@ Thanks for RTFM. ☺️
 [🚎yard-current]: http://rubydoc.info/gems/undrive_google
 [🚎yard-head]: https://undrive-google.galtzo.com
 [💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
-[💎SHA_checksums]: https://gitlab.com/kettle-rb/undrive_google/-/tree/main/checksums
+[💎SHA_checksums]: https://gitlab.com/galtzo-floss/undrive_google/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_&_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
 [💎appraisal2]: https://github.com/appraisal-rb/appraisal2

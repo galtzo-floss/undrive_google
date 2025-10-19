@@ -5,9 +5,20 @@ module UndriveGoogle
   class Options
     include Singleton
 
-    attr_accessor :config_yaml, :key_file, :file_id, :file_by, :extensions, :unzip,
-                  :keep_zip, :rename, :rename_proc, :lang, :title,
-                  :dir, :sweep, :verbose
+    attr_accessor :config_yaml,
+      :key_file,
+      :file_id,
+      :file_by,
+      :extensions,
+      :unzip,
+      :keep_zip,
+      :rename,
+      :rename_proc,
+      :lang,
+      :title,
+      :dir,
+      :sweep,
+      :verbose
 
     def initialize
       load_yaml(true)
@@ -15,7 +26,7 @@ module UndriveGoogle
 
     def define_options(parser)
       parser.banner = "Usage: undrive_google [options]"
-      parser.separator ""
+      parser.separator("")
 
       # Handle YAML, as default overrides
       config_yaml_option(parser)
@@ -34,7 +45,7 @@ module UndriveGoogle
       sweep_option(parser)
       verbose_option(parser)
 
-      parser.separator ""
+      parser.separator("")
 
       # Print an options summary.
       parser.on_tail("-h", "--help", "Show this message") do
@@ -47,30 +58,46 @@ module UndriveGoogle
 
     # CLI options will take precedence over values in YAML
     def config_yaml_option(parser)
-      parser.on("-c", "--config-yaml PATH", String,
-                "Path to UndriveGoogle config YAML file") do |config_yaml|
+      parser.on(
+        "-c",
+        "--config-yaml PATH",
+        String,
+        "Path to UndriveGoogle config YAML file",
+      ) do |config_yaml|
         self.config_yaml = config_yaml
         load_yaml
       end
     end
 
     def key_file_option(parser)
-      parser.on("-k", "--key-file PATH", String,
-                "Path to Google Service Account Keys JSON file") do |key_file|
+      parser.on(
+        "-k",
+        "--key-file PATH",
+        String,
+        "Path to Google Service Account Keys JSON file",
+      ) do |key_file|
         self.key_file = key_file
       end
     end
 
     def file_id_option(parser)
-      parser.on("-i", "--file-id ID", String,
-                "ID used to find file (key or title)") do |file_id|
+      parser.on(
+        "-i",
+        "--file-id ID",
+        String,
+        "ID used to find file (key or title)",
+      ) do |file_id|
         self.file_id = file_id
       end
     end
 
     def by_option(parser)
-      parser.on("-b", "--file-by [TYPE]", %i[key title],
-                "Select type of ID used to find file (key, title)") do |file_by|
+      parser.on(
+        "-b",
+        "--file-by [TYPE]",
+        %i[key title],
+        "Select type of ID used to find file (key, title)",
+      ) do |file_by|
         self.file_by = file_by
       end
     end
@@ -108,8 +135,12 @@ module UndriveGoogle
     end
 
     def dir_option(parser)
-      parser.on("-d", "--dir PATH", String,
-                "Path to directory where liberated files will go") do |dir|
+      parser.on(
+        "-d",
+        "--dir PATH",
+        String,
+        "Path to directory where liberated files will go",
+      ) do |dir|
         self.dir = dir.strip
       end
     end
@@ -128,8 +159,11 @@ module UndriveGoogle
 
     def sweep_option(parser)
       # Boolean switch.
-      parser.on("-s", "--[no-]sweep",
-                "Delete all files from directory specified by -d or --dir prior to liberation") do |sweep|
+      parser.on(
+        "-s",
+        "--[no-]sweep",
+        "Delete all files from directory specified by -d or --dir prior to liberation",
+      ) do |sweep|
         self.sweep = sweep
       end
     end

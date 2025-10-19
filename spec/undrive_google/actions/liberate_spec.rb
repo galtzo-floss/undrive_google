@@ -33,14 +33,21 @@ RSpec.describe UndriveGoogle::Actions::Liberate do
     end
 
     context "when not unzipping" do
-      let(:args) { [
-        "-d", dir,
-        "-e", "zip,txt",
-        "--rename-zip", "bob.zip",
-        "-l", " ", # this is a hack to disable FixHtml
-        "-t", " ", # this is a hack to disable FixHtml
-        "--no-unzip"
-      ] }
+      let(:args) {
+        [
+          "-d",
+          dir,
+          "-e",
+          "zip,txt",
+          "--rename-zip",
+          "bob.zip",
+          "-l",
+          " ", # this is a hack to disable FixHtml
+          "-t",
+          " ", # this is a hack to disable FixHtml
+          "--no-unzip",
+        ]
+      }
       let(:extension) { "zip" }
 
       before do
@@ -51,19 +58,26 @@ RSpec.describe UndriveGoogle::Actions::Liberate do
       it "does not open zip" do
         allow(Zip::File).to receive(:open).with(instance.file_path)
         block_is_expected.not_to raise_error
-        expect(Zip::File).to_not have_received(:open).with(instance.file_path)
+        expect(Zip::File).not_to have_received(:open).with(instance.file_path)
       end
     end
 
     context "when unzipping" do
-      let(:args) { [
-        "-d", dir,
-        "-e", "zip,txt",
-        "--rename-zip", "bob.zip",
-        "-l", " ", # this is a hack to disable FixHtml
-        "-t", " ", # this is a hack to disable FixHtml
-        "-u"
-      ] }
+      let(:args) {
+        [
+          "-d",
+          dir,
+          "-e",
+          "zip,txt",
+          "--rename-zip",
+          "bob.zip",
+          "-l",
+          " ", # this is a hack to disable FixHtml
+          "-t",
+          " ", # this is a hack to disable FixHtml
+          "-u",
+        ]
+      }
       let(:extension) { "zip" }
 
       before do

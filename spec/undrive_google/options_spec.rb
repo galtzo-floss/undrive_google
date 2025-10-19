@@ -69,7 +69,7 @@ RSpec.describe UndriveGoogle::Options do
               end
 
               it "does not set rename_#{type}" do
-                block_is_expected.to_not change { instance.rename[type] }.from(nil)
+                block_is_expected.not_to change { instance.rename[type] }.from(nil)
               end
             end
           end
@@ -98,8 +98,10 @@ RSpec.describe UndriveGoogle::Options do
         end
 
         it "sets key_file" do
-          block_is_expected.to change(instance,
-                                      :key_file).from("spec/config/serviceid-111111d111111.json").to("asdf.json")
+          block_is_expected.to change(
+            instance,
+            :key_file,
+          ).from("spec/config/serviceid-111111d111111.json").to("asdf.json")
         end
       end
 
@@ -135,8 +137,10 @@ RSpec.describe UndriveGoogle::Options do
         end
 
         it "sets extensions" do
-          block_is_expected.to change(instance,
-                                      :extensions).from(%i[docx odt rtf pdf txt zip epub]).to(%w[docx txt rtf])
+          block_is_expected.to change(
+            instance,
+            :extensions,
+          ).from(%i[docx odt rtf pdf txt zip epub]).to(%w[docx txt rtf])
         end
       end
 

@@ -4,6 +4,7 @@ module UndriveGoogle
   # A file on Google Drive
   class CaptiveFile
     include Singleton
+
     attr_accessor :options, :exports
 
     # @return nil

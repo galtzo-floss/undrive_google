@@ -16,7 +16,7 @@ module UndriveGoogle
         return if Dir.empty?(dir)
 
         puts "Sweeping directory clean #{dir}" if Options.instance.verbose
-        FileUtils.rm_rf Dir.glob("#{dir}/*")
+        FileUtils.rm_rf(Dir.glob("#{dir}/*"))
       end
     end
   end

@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/kettle-rb/undrive_google'
+    value: 'https://github.com/galtzo-floss/undrive_google'
     description: undrive_google
-repository-code: 'https://github.com/kettle-rb/undrive_google'
+repository-code: 'https://github.com/galtzo-floss/undrive_google'
 abstract: >-
   undrive_google
 license: See license file

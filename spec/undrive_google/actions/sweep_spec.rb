@@ -34,59 +34,67 @@ RSpec.describe UndriveGoogle::Actions::Sweep do
 
     context "when dir is falsey" do
       let(:dir) { "false" }
+
       it "does not rm" do
         allow(FileUtils).to receive(:rm_rf)
         sweep
-        expect(FileUtils).to_not have_received(:rm_rf)
+        expect(FileUtils).not_to have_received(:rm_rf)
       end
     end
 
     context "when dir is ' '" do
       let(:dir) { " " }
+
       it "does not rm" do
         allow(FileUtils).to receive(:rm_rf)
         sweep
-        expect(FileUtils).to_not have_received(:rm_rf)
+        expect(FileUtils).not_to have_received(:rm_rf)
       end
     end
 
-    context "when dir is '  /  '" do
+    context "when dir is ' / '" do
       let(:dir) { "  /  " }
+
       it "does not rm" do
         allow(FileUtils).to receive(:rm_rf)
         sweep
-        expect(FileUtils).to_not have_received(:rm_rf)
+        expect(FileUtils).not_to have_received(:rm_rf)
       end
     end
 
     context "when dir is non-existent" do
       let(:dir) { "fake-dir" }
+
       it "does not rm" do
         allow(FileUtils).to receive(:rm_rf)
         sweep
-        expect(FileUtils).to_not have_received(:rm_rf)
+        expect(FileUtils).not_to have_received(:rm_rf)
       end
     end
 
     context "when dir is empty" do
       let(:dir) { empty_dir }
+
       before do
         Dir.mkdir(empty_dir) unless Dir.exist?(empty_dir)
         FileUtils.rm_rf Dir.glob("#{empty_dir}/*")
       end
+
       it "does not rm" do
         allow(FileUtils).to receive(:rm_rf)
         sweep
-        expect(FileUtils).to_not have_received(:rm_rf)
+        expect(FileUtils).not_to have_received(:rm_rf)
       end
     end
 
     context "when dir is not empty" do
       let(:dir) { full_dir }
+
       before do
         Dir.mkdir(full_dir) unless Dir.exist?(full_dir)
         FileUtils.touch ["#{full_dir}/a.out", "#{full_dir}/b.out"]
       end
+
       it "does rm" do
         allow(FileUtils).to receive(:rm_rf)
         sweep
