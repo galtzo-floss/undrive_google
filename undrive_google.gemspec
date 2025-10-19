@@ -50,6 +50,7 @@ Gem::Specification.new do |spec|
   spec.executables = ["undrive_google"]
   spec.require_paths = ["lib"]
 
+  spec.add_development_dependency "kettle-dev", "~> 1.1"
   spec.add_development_dependency "rspec-block_is_expected"
   spec.add_development_dependency "rubocop-lts", "~> 22.0"
 end

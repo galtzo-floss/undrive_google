@@ -13,8 +13,7 @@ gem "byebug"
 # See: https://github.com/gimite/google-drive-ruby/pull/427
 gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
 
-# See: https://github.com/rubyzip/rubyzip#updating-to-version-30
-gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
+gem "rubyzip", "~> 3.2"
 
 gem "rake", "~> 13.0"
 gem "rspec", "~> 3.0"
@@ -29,3 +28,6 @@ gem "simplecov", require: false
 gem "simplecov-cobertura" # XML for Jenkins
 gem "simplecov-json" # For CodeClimate
 gem "simplecov-lcov", require: false
+
+# ex std-lib
+gem "logger"
