@@ -24,7 +24,8 @@ RSpec.describe UndriveGoogle::Transformations::FixHtml do
     end
 
     context "with good path" do
-      let(:html_path) { "tmp/test.html" }
+      # Use the repository-tracked spec/tmp directory (exists on CI) instead of top-level tmp
+      let(:html_path) { "spec/tmp/test.html" }
       let(:html) { "<html><head></head><body></body></html>" }
 
       before do
