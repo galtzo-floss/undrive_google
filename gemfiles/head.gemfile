@@ -2,6 +2,7 @@
 
 source "https://gem.coop"
 
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
 gem "benchmark", "~> 0.4", ">= 0.4.1"
 
 gemspec path: "../"

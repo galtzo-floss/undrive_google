@@ -20,6 +20,8 @@
 #    - Broken workflow indicates that a new contributor will have a bad time
 #
 appraise "unlocked_deps" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/coverage.gemfile"
   eval_gemfile "modular/documentation.gemfile"
   eval_gemfile "modular/style.gemfile"
@@ -30,6 +32,8 @@ end
 # Used for head (nightly) releases of ruby, truffleruby, and jruby.
 # Split into discrete appraisals if one of them needs a dependency locked discretely.
 appraise "head" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   # Why is gem "cgi" here? See: https://github.com/vcr/vcr/issues/1057
   #  gem "cgi", ">= 0.5"
   gem "benchmark", "~> 0.4", ">= 0.4.1"
@@ -39,15 +43,21 @@ end
 # Used for current releases of ruby, truffleruby, and jruby.
 # Split into discrete appraisals if one of them needs a dependency locked discretely.
 appraise "current" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 
 # Test current Rubies against head versions of runtime dependencies
 appraise "dep-heads" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/runtime_heads.gemfile"
 end
 
 appraise "ruby-3-1" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
 end
 
@@ -56,16 +66,22 @@ appraise "ruby-3-2" do
 end
 
 appraise "ruby-3-3" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
 end
 
 # Only run security audit on the latest version of Ruby
 appraise "audit" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 
 # Only run coverage on the latest version of Ruby
 appraise "coverage" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/coverage.gemfile"
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
@@ -73,6 +89,8 @@ end
 
 # Only run linter on the latest version of Ruby (but, in support of oldest supported Ruby version)
 appraise "style" do
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
   eval_gemfile "modular/style.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
