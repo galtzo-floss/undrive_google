@@ -87,6 +87,12 @@ Gem::Specification.new do |spec|
   # Listed files are the relative paths from bindir above.
   spec.executables = ["undrive_google"]
 
+  # This gem has many good, long-standing, open PRs, and seems unmaintained.
+  # For EPUB functionality you must target my fork:
+  # See: https://github.com/gimite/google-drive-ruby/pull/427
+  # gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+  spec.add_dependency("google_drive")
+
   # Utilities
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
 

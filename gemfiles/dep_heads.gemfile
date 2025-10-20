@@ -2,8 +2,8 @@
 
 source "https://gem.coop"
 
-gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
-
 gemspec path: "../"
+
+eval_gemfile("modular/optional.gemfile")
 
 eval_gemfile("modular/runtime_heads.gemfile")

@@ -25,6 +25,7 @@ PATH
   remote: .
   specs:
     undrive_google (1.1.1)
+      google_drive
       version_gem (~> 1.1, >= 1.1.9)
 
 GEM
