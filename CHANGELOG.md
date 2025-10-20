@@ -29,3 +29,42 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [1.1.1] - 2022-11-28
+
+- TAG: [v1.0.5][1.0.5t]
+
+## [1.1.0] - 2022-11-28
+
+- TAG: [v1.0.4][1.0.4t]
+
+## [1.0.3] - 2022-11-01
+
+- TAG: [v1.0.3][1.0.3t]
+
+## [1.0.2] - 2022-10-27
+
+- TAG: [v1.0.2][1.0.2t]
+
+## [1.0.1] - 2022-10-26
+
+- TAG: [v1.0.1][1.0.1t]
+
+## [1.0.0] - 2022-10-25
+
+- TAG: [v1.0.0][1.0.0t]
+
+
+[Unreleased]: https://github.com/galtzo-floss/undrive_google/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/galtzo-floss/undrive_google/compare/v1.1.0...v1.1.1
+[1.1.1t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.1.1
+[1.1.0]: https://github.com/galtzo-floss/undrive_google/compare/v1.0.3...v1.1.0
+[1.1.0t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.1.0
+[1.0.3]: https://github.com/galtzo-floss/undrive_google/compare/v1.0.2...v1.0.3
+[1.0.3t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.0.3
+[1.0.2]: https://github.com/galtzo-floss/undrive_google/compare/v1.0.1...v1.0.2
+[1.0.2t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.0.2
+[1.0.1]: https://github.com/galtzo-floss/undrive_google/compare/v1.0.0...v1.0.1
+[1.0.1t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.0.1
+[1.0.0]: https://github.com/galtzo-floss/undrive_google/compare/a4217d575b7094530339d627c00c8e6ce70144a8...v1.0.0
+[1.0.0t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.0.0
