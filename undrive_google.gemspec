@@ -91,7 +91,7 @@ Gem::Specification.new do |spec|
   # For EPUB functionality you must target my fork:
   # See: https://github.com/gimite/google-drive-ruby/pull/427
   # gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
-  spec.add_dependency("google_drive")
+  spec.add_dependency("google_drive", "~> 3.0", ">= 3.0.7")             # ruby >= 2.0.0
 
   # Utilities
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
