@@ -20,13 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- more documentation
-- documentation site
-  - https://undrive-google.galtzo.com
-
 ### Changed
-
-- upgraded kettle-dev to v1.1.36
 
 ### Deprecated
 
@@ -35,6 +29,21 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [1.1.2] - 2025-10-20
+
+- TAG: [v1.1.2][1.1.2t]
+- 75.56% documented
+
+### Added
+
+- more documentation
+- documentation site
+  - https://undrive-google.galtzo.com
+
+### Changed
+
+- upgraded kettle-dev to v1.1.36
 
 ## [1.1.1] - 2022-11-28
 
@@ -60,7 +69,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - TAG: [v1.0.0][1.0.0t]
 
-[Unreleased]: https://github.com/galtzo-floss/undrive_google/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/galtzo-floss/undrive_google/compare/v1.1.2...HEAD
+[1.1.2]: https://github.com/galtzo-floss/undrive_google/compare/v1.1.1...v1.1.2
+[1.1.2t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.1.2
 [1.1.1]: https://github.com/galtzo-floss/undrive_google/compare/v1.1.0...v1.1.1
 [1.1.1t]: https://github.com/galtzo-floss/undrive_google/releases/tag/v1.1.1
 [1.1.0]: https://github.com/galtzo-floss/undrive_google/compare/v1.0.3...v1.1.0
