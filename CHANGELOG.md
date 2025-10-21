@@ -33,6 +33,8 @@ Please file a bug if you notice a violation of semantic versioning.
 ## [1.1.2] - 2025-10-20
 
 - TAG: [v1.1.2][1.1.2t]
+- COVERAGE: 98.94% -- 373/377 lines in 16 files
+- BRANCH COVERAGE: 80.17% -- 93/116 branches in 16 files
 - 75.56% documented
 
 ### Added
@@ -47,11 +49,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ## [1.1.1] - 2022-11-28
 
-- TAG: [v1.0.5][1.0.5t]
+- TAG: [v1.1.1][1.1.1t]
 
 ## [1.1.0] - 2022-11-28
 
-- TAG: [v1.0.4][1.0.4t]
+- TAG: [v1.1.0][1.1.0t]
 
 ## [1.0.3] - 2022-11-01
 
