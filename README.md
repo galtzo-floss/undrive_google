@@ -1,27 +1,36 @@
-| 📍 NOTE                                                                                                                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RubyGems.org was [recently compromised][draper-security] in a [hostile takeover][draper-takeover] about which [many lies][draper-lies] have been told.      |
-| I'm in the process of adding warnings to some important gems because I [don't condone the theft][draper-theft] of the bundler and rubygems-update projects. |
-| Once publishing to [gem.coop][gem-coop] is available I will stop publishing to RubyGems.org.                                                                |
-| Please see [here][gem-coop] and [here][martin-ann] for more info on what comes next.                                                                        |
+| 📍 NOTE                                                                                                                                                                                                   |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RubyGems.org [suffered][draper-security] a [hostile takeover][ellen-takeover] in September 2025. It is a [complicated story][draper-takeover] which is difficult to [parse quickly][draper-lies].         |
+| I'm in the process of adding warnings to gems because I [don't condone the theft][draper-theft] of the bundler and rubygems-update projects.                                                              |
+| If repos or publishing rights for my gems were similarly stolen, I'd hope others would stand up for me.                                                                                                   |
+| Once publishing to [gem.coop][gem-coop] is available I will stop publishing to RubyGems.org, unless they make amends.                                                                                     |
+| See [here][gem-naming], [here][gem-coop] and [here][martin-ann] for more info on what comes next. This ["Technology for Humans" podcast episode][reinteractive-podcast] is the best summary I'm aware of. |
+| My (WIP) proposal for [bundler/gem scopes][gem-scopes]. My (WIP) proposal for a federated [gem server][gem-server].                                                                                       |
 
 [draper-security]: https://joel.drapper.me/p/ruby-central-security-measures/
 [draper-takeover]: https://joel.drapper.me/p/ruby-central-takeover/
+[ellen-takeover]: https://pup-e.com/blog/goodbye-rubygems/
 [draper-lies]: https://joel.drapper.me/p/ruby-central-fact-check/
 [draper-theft]: https://joel.drapper.me/p/ruby-central/
 [gem-coop]: https://gem.coop
+[gem-naming]: https://github.com/gem-coop/gem.coop/issues/12
 [martin-ann]: https://martinemde.com/2025/10/05/announcing-gem-coop.html
+[gem-scopes]: https://github.com/galtzo-floss/bundle-namespace
+[gem-server]: https://github.com/galtzo-floss/gem-server
+[reinteractive-podcast]: https://youtu.be/_H4qbtC5qzU?si=BvuBU90R2wAqD2E6
 
-[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-i]][🖼️galtzo-discord] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang]
+[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-i]][🖼️galtzo-discord] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang] [![undrive_google Logo by Aboling0, CC BY-SA 4.0][🖼️undrive_google-i]][🖼️undrive_google]
 
 [🖼️galtzo-i]: https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg
 [🖼️galtzo-discord]: https://discord.gg/3qme4XHNKN
 [🖼️ruby-lang-i]: https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg
 [🖼️ruby-lang]: https://www.ruby-lang.org/
+[🖼️undrive_google-i]: https://logos.galtzo.com/assets/images/galtzo-floss/undrive_google/avatar-192px.svg
+[🖼️undrive_google]: https://github.com/galtzo-floss/undrive_google
 
 # 🏴‍☠️ UndriveGoogle
 
-[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license-ref] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![Open Source Helpers][👽oss-helpi]][👽oss-help] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Supported][🚎6-s-wfi]][🚎6-s-wf] [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
+[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license-ref] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![Open Source Helpers][👽oss-helpi]][👽oss-help] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Supported][🚎6-s-wfi]][🚎6-s-wf] [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf] [![CI Unsupported][🚎7-us-wfi]][🚎7-us-wf] [![CI Ancient][🚎1-an-wfi]][🚎1-an-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
 
 `if ci_badges.map(&:color).detect { it != "green"}` ☝️ [let me know][🖼️galtzo-discord], as I may have missed the [discord notification][🖼️galtzo-discord].
 
@@ -52,8 +61,8 @@ OTOH, if you want to "own", host, track, etc your 'own' files
 
 | Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                          |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Works with JRuby        | [![JRuby 9.4 Compat][💎jruby-9.4i]][🚎10-j-wf] [![JRuby 10.0 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                          |
-| Works with Truffle Ruby | [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-c-i]][🚎11-c-wf]                                                                                                                                                            |
+| Works with JRuby        | ![JRuby 9.1 Compat][💎jruby-9.1i] ![JRuby 9.2 Compat][💎jruby-9.2i] ![JRuby 9.3 Compat][💎jruby-9.3i] <br/> [![JRuby 9.4 Compat][💎jruby-9.4i]][🚎10-j-wf] [![JRuby 10.0 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                          |
+| Works with Truffle Ruby | ![Truffle Ruby 22.3 Compat][💎truby-22.3i] ![Truffle Ruby 23.0 Compat][💎truby-23.0i] <br/> [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-c-i]][🚎11-c-wf]                                                                                                                                                            |
 | Works with MRI Ruby 3   | [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                         |
 | Support & Community     | [![Join Me on Daily.dev's RubyFriends][✉️ruby-friends-img]][✉️ruby-friends] [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                       |
 | Source                  | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on CodeBerg.org][📜src-cb-img]][📜src-cb] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                         |
@@ -242,117 +251,6 @@ title: 'My Cool HTML'
 
 ## 🔧 Basic Usage
 
-## NOTE: Export epub & Unzip html
-
-There is a bug (missing feature) in `google_drive` gem preventing export of epub.  You can use this patched branch:
-
-Create a Gemfile:
-```ruby
-source "https://rubygems.org"
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
-```
-
-Please upvote this PR [#427](https://github.com/gimite/google-drive-ruby/pull/427)!
-
-Separately, the `rubyzip` maintainers are now working on v3, and this gem utilizes that syntax.  But it hasn't been released yet.
-Therefore, if you need to unzip to HTML add another line to the `Gemfile` from above:
-```ruby
-gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
-```
-
-When liberating your files, ensure the script will use the Gemfile if it isn't in the same directory where you are running the `undrive_google` command:
-```shell
-BUNDLE_GEMFILE=path/to/Gemfile bundle update
-BUNDLE_GEMFILE=path/to/Gemfile bundle exec undrive_google -c path/to/config
-```
-NOTE: If the Gemfile and the config are in the same, current, directory, you can simply run:
-```shell
-bundle exec undrive_google
-```
-
-My complete `Gemfile` looks like this:
-```ruby
-# frozen_string_literal: true
-
-source "https://rubygems.org"
-
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
-
-gem "undrive_google", "~> 1.1"
-
-# See: https://github.com/gimite/google-drive-ruby/pull/427
-gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
-
-# See: https://github.com/rubyzip/rubyzip#updating-to-version-30
-gem "rubyzip", github: "rubyzip/rubyzip", branch: "master"
-```
-
-My `undrive_google.yml` config file looks like this (sanitized a bit):
-```yaml
-file_id: "the-key-to-my-google-drive-file(find-in-the-url)"
-key_file: serviceid-1234567890.json
-dir: /my/path/to/my/cv
-rename_html: resume.html
-rename_pattern:
-  - " "
-  - "_"
-extensions: zip
-keep_zip: true
-unzip: true
-verbose: true
-sweep: true
-```
-
-The liberated files get published at [https://railsbling.com/cv](https://railsbling.com/cv).
-
-## Story Time
-
-Imagine Google Drive is a 🐭
-Imagine your file (e.g. resume) is a 🍪
-🐭's 🍪 exporter: 🖨
-
-Tell me if you've heard this one already.
-
-1. Give 🐭 your 🍪 for "safe-keeping"
-2. Recognizing this SPoF, you ask 🐭 to give back a 🍪 copy
-3. "I'll run it through my 🍪 🖨", says 🐭
-4. 🖨 replicates various 🍪 extensions: `pdf`, `odt`, `docx`, `txt`, `rtf`, `zip`, and `epub`
-5. Rename 🍪 for web (e.g. replace ` ` with `_`)
-6. Extract replicated `.zip` format to `.html`
-7. Rename extracted HTML file for self-hosting
-8. Realize 🐭's HTML is invalid
-9. Fix 🐭's broke-ass (missing `lang` attribute and `title` element)
-10. Upload 🍪 to your website (you're on your own for this part)
-11. Finally Finished!
-12. Find mistakes 😭
-13. Bake a new 🍪
-14. GOTO 1
-
-This gem solves the classic 🐭-🍪 problem by automating steps 3-9.
-Will save at least 15 minutes each loop.
-
-Note that it doesn't have to be a resume.
-There are likely other use cases that apply.
-
-Back to the story...
-
-1. Give 🐭 your 🍪 for "safe-keeping"
-2. Recognizing this SPoF, you ask 🐭 to give back a 🍪 copy
-3. Run:
-   ```shell
-   undrive_google
-   ```
-4. Upload 🍪 to your website (you're on your own for this part)
-5. Finally Finished!
-6. Find mistakes 😭
-7. Bake a new 🍪
-8. GOTO 1
-
-In order for the fantasy above to be realized,
-you must to a bit of initial configuration, but you already knew that.
-
 ## 🦷 FLOSS Funding
 
 While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.
@@ -445,9 +343,6 @@ Everyone interacting with this project's codebases, issue trackers,
 chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct].
 
 ## 🌈 Contributors
-
-Bug reports are welcome on Source Hut at [https://todo.sr.ht/~galtzo/undrive_google](https://todo.sr.ht/~galtzo/undrive_google).
-Patches are welcome on Source Hut at [https://lists.sr.ht/~galtzo/undrive_google-devel](https://lists.sr.ht/~galtzo/undrive_google-devel)
 
 [![Contributors][🖐contributors-img]][🖐contributors]
 
@@ -651,16 +546,22 @@ Thanks for RTFM. ☺️
 [🏀coveralls-img]: https://coveralls.io/repos/github/galtzo-floss/undrive_google/badge.svg?branch=main
 [🖐codeQL]: https://github.com/galtzo-floss/undrive_google/security/code-scanning
 [🖐codeQL-img]: https://github.com/galtzo-floss/undrive_google/actions/workflows/codeql-analysis.yml/badge.svg
+[🚎1-an-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/ancient.yml
+[🚎1-an-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/ancient.yml/badge.svg
 [🚎2-cov-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/coverage.yml
 [🚎2-cov-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/coverage.yml/badge.svg
 [🚎3-hd-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/heads.yml
 [🚎3-hd-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/heads.yml/badge.svg
-[🚎4-lg-wf]: https://github.com/omniauth/omniauth-identity/actions/workflows/legacy.yml
-[🚎4-lg-wfi]: https://github.com/omniauth/omniauth-identity/actions/workflows/legacy.yml/badge.svg
+[🚎4-lg-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/legacy.yml
+[🚎4-lg-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/legacy.yml/badge.svg
 [🚎5-st-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/style.yml
 [🚎5-st-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/style.yml/badge.svg
 [🚎6-s-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/supported.yml
 [🚎6-s-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/supported.yml/badge.svg
+[🚎7-us-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/unsupported.yml
+[🚎7-us-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/unsupported.yml/badge.svg
+[🚎8-ho-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/hoary.yml
+[🚎8-ho-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/hoary.yml/badge.svg
 [🚎9-t-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/truffle.yml
 [🚎9-t-wfi]: https://github.com/galtzo-floss/undrive_google/actions/workflows/truffle.yml/badge.svg
 [🚎10-j-wf]: https://github.com/galtzo-floss/undrive_google/actions/workflows/jruby.yml
@@ -680,9 +581,14 @@ Thanks for RTFM. ☺️
 [💎ruby-3.3i]: https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-c-i]: https://img.shields.io/badge/Ruby-current-CC342D?style=for-the-badge&logo=ruby&logoColor=green
 [💎ruby-headi]: https://img.shields.io/badge/Ruby-HEAD-CC342D?style=for-the-badge&logo=ruby&logoColor=blue
+[💎truby-22.3i]: https://img.shields.io/badge/Truffle_Ruby-22.3_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-23.0i]: https://img.shields.io/badge/Truffle_Ruby-23.0_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-23.1i]: https://img.shields.io/badge/Truffle_Ruby-23.1-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-c-i]: https://img.shields.io/badge/Truffle_Ruby-current-34BCB1?style=for-the-badge&logo=ruby&logoColor=green
 [💎truby-headi]: https://img.shields.io/badge/Truffle_Ruby-HEAD-34BCB1?style=for-the-badge&logo=ruby&logoColor=blue
+[💎jruby-9.1i]: https://img.shields.io/badge/JRuby-9.1_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.2i]: https://img.shields.io/badge/JRuby-9.2_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.3i]: https://img.shields.io/badge/JRuby-9.3_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
@@ -712,7 +618,7 @@ Thanks for RTFM. ☺️
 [📌gitmoji]:https://gitmoji.dev
 [📌gitmoji-img]:https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-1.176-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-4.112-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year

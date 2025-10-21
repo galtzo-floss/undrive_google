@@ -3,9 +3,3 @@
 # Required for kettle-pre-release
 # URL parsing with Unicode support (falls back to URI if not available)
 gem "addressable", ">= 2.8", "< 3" # ruby >= 2.2
-
-# These are required for certain functionality, which is always tested in CI.
-# So they are "required" for testing, but "optional" for normal usage.
-# See: https://github.com/gimite/google-drive-ruby/pull/427
-gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
-gem "rubyzip", "~> 3.2"

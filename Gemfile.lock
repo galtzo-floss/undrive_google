@@ -1,15 +1,4 @@
 GIT
-  remote: https://github.com/pboling/google-drive-ruby.git
-  revision: cd5ca1f80373fa7a57379f64a93d0b35c0299e99
-  branch: pboling-epub-mimetype
-  specs:
-    google_drive (3.0.7)
-      google-apis-drive_v3 (>= 0.5.0, < 1.0.0)
-      google-apis-sheets_v4 (>= 0.4.0, < 1.0.0)
-      googleauth (>= 0.5.0, < 1.0.0)
-      nokogiri (>= 1.5.3, < 2.0.0)
-
-GIT
   remote: https://github.com/pboling/yard-junk.git
   revision: 54ccebabbfa9a9cd44d0b991687ebbfd22c32b55
   branch: next
@@ -129,6 +118,11 @@ GEM
       google-apis-core (>= 0.11.0, < 2.a)
     google-apis-sheets_v4 (0.26.0)
       google-apis-core (>= 0.11.0, < 2.a)
+    google_drive (3.0.7)
+      google-apis-drive_v3 (>= 0.5.0, < 1.0.0)
+      google-apis-sheets_v4 (>= 0.4.0, < 1.0.0)
+      googleauth (>= 0.5.0, < 1.0.0)
+      nokogiri (>= 1.5.3, < 2.0.0)
     googleauth (0.17.1)
       faraday (>= 0.17.3, < 2.0)
       jwt (>= 1.4, < 3.0)
@@ -147,7 +141,7 @@ GEM
     json (2.15.1)
     jwt (2.10.2)
       base64
-    kettle-dev (1.1.35)
+    kettle-dev (1.1.36)
     kettle-soup-cover (1.0.10)
       simplecov (~> 0.22)
       simplecov-cobertura (~> 3.0)
@@ -308,7 +302,6 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_engine (2.0.3)
     ruby_version (1.0.3)
-    rubyzip (3.2.0)
     signet (0.21.0)
       addressable (~> 2.8)
       faraday (>= 0.17.5, < 3.a)
@@ -394,14 +387,12 @@ DEPENDENCIES
   erb (~> 5.0)
   gem_bench (~> 2.0, >= 2.0.5)
   gitmoji-regex (~> 1.0, >= 1.0.3)
-  google_drive!
   irb (~> 1.15, >= 1.15.2)
   kettle-dev (~> 1.1)
   kettle-soup-cover (~> 1.0, >= 1.0.10)
-  kettle-test (~> 1.0)
+  kettle-test (~> 1.0, >= 1.0.5)
   kramdown (~> 2.5, >= 2.5.1)
   kramdown-parser-gfm (~> 1.1)
-  logger
   mutex_m (~> 0.2)
   rake (~> 13.0)
   rdoc (~> 6.11)
@@ -413,7 +404,6 @@ DEPENDENCIES
   rubocop-rspec (~> 3.6)
   rubocop-ruby3_1
   ruby-progressbar (~> 1.13)
-  rubyzip (~> 3.2)
   standard (>= 1.50)
   stone_checksums (~> 1.0, >= 1.0.2)
   stringio (>= 3.0)
