@@ -97,7 +97,7 @@
   </tbody>
 </table>
 
-<p><a href="https://discord.gg/3qme4XHNKN"><img src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg" alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0"></a> <a href="https://www.ruby-lang.org/"><img src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg" alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5"></a> <a href="https://github.com/galtzo-floss/undrive_google"><img src="https://logos.galtzo.com/assets/images/galtzo-floss/undrive_google/avatar-192px.svg" alt="undrive_google Logo by Aboling0, CC BY-SA 4.0"></a></p>
+<p><a href="https://discord.gg/3qme4XHNKN"><img src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg" alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0"></a> <a href="https://www.ruby-lang.org/"><img src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg" alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5"></a></p>
 
 <h1 id="‍️-undrivegoogle">🏴‍☠️ UndriveGoogle</h1>
 
@@ -131,6 +131,39 @@ If yes, DO NOT use this gem. Instead follow <a href="https://support.google.com/
 
 <p>OTOH, if you want to “own”, host, track, etc your ‘own’ files<br>
 (e.g. your resume), DO use this gem.</p>
+
+<h3 id="story-time">Story Time</h3>
+
+<p>Imagine Google Drive is a 🐭<br>
+Imagine your file (e.g. resume) is a 🍪<br>
+🐭’s 🍪 exporter: 🖨</p>
+
+<p>Tell me if you’ve heard this one already.</p>
+
+<ol>
+  <li>Give 🐭 your 🍪 for “safe-keeping”</li>
+  <li>Recognizing this SPoF, you ask 🐭 to give back a 🍪 copy</li>
+  <li>“I’ll run it through my 🍪 🖨”, says 🐭</li>
+  <li>🖨 replicates various 🍪 extensions: <code>pdf</code>, <code>odt</code>, <code>docx</code>, <code>txt</code>, <code>rtf</code>, <code>zip</code>, and <code>epub</code>
+</li>
+  <li>Rename 🍪 for web (e.g. replace ` ` with <code>_</code>)</li>
+  <li>Extract replicated <code>.zip</code> format to <code>.html</code>
+</li>
+  <li>Rename extracted HTML file for self-hosting</li>
+  <li>Realize 🐭’s HTML is invalid</li>
+  <li>Fix 🐭’s broke-ass (missing <code>lang</code> attribute and <code>title</code> element)</li>
+  <li>Upload 🍪 to your website (you’re on your own for this part)</li>
+  <li>Finally Finished!</li>
+  <li>Find mistakes 😭</li>
+  <li>Bake a new 🍪</li>
+  <li>GOTO 1</li>
+</ol>
+
+<p>This gem solves the classic 🐭-🍪 problem by automating steps 3-9.<br>
+Will save at least 15 minutes each loop.</p>
+
+<p>Note that it doesn’t have to be a resume.<br>
+There are likely other use cases that apply.</p>
 
 <h2 id="-info-you-can-shake-a-stick-at">💡 Info you can shake a stick at</h2>
 
@@ -393,6 +426,54 @@ title: &#39;My Cool HTML&#39;
 
 <h2 id="-basic-usage">🔧 Basic Usage</h2>
 
+<h3 id="example-export-epub--unzip-html">Example: Export epub &amp; Unzip html</h3>
+
+<p>NOTE: There is a bug (missing feature) in <code>google_drive</code> gem preventing export of <code>epub</code> format.  You can use my patched branch if you need <code>epub</code>:</p>
+
+<p>Create a Gemfile:</p>
+<pre class="code language-ruby"><code class="language-ruby">source &quot;https://gem.coop&quot;
+
+gem &quot;google_drive&quot;, github: &quot;pboling/google-drive-ruby&quot;, branch: &quot;pboling-epub-mimetype&quot;
+</code></pre>
+
+<p>Please upvote this PR <a href="https://github.com/gimite/google-drive-ruby/pull/427">#427</a>!</p>
+
+<p>When liberating your files, ensure the script will use the Gemfile if it isn’t in the same directory where you are running the <code>undrive_google</code> command:</p>
+<pre class="code language-shell"><code class="language-shell">BUNDLE_GEMFILE=path/to/Gemfile bundle update
+BUNDLE_GEMFILE=path/to/Gemfile bundle exec undrive_google -c path/to/config
+</code></pre>
+<p>NOTE: If the Gemfile and the config are in the same, current, directory, you can simply run:</p>
+<pre class="code language-shell"><code class="language-shell">bundle exec undrive_google
+</code></pre>
+
+<p>My complete <code>Gemfile</code> looks like this:</p>
+<pre class="code language-ruby"><code class="language-ruby"># frozen_string_literal: true
+
+source &quot;https://gem.coop&quot;
+
+gem &quot;undrive_google&quot;, &quot;~&gt; 1.1&quot;
+
+# See: https://github.com/gimite/google-drive-ruby/pull/427
+gem &quot;google_drive&quot;, github: &quot;pboling/google-drive-ruby&quot;, branch: &quot;pboling-epub-mimetype&quot;
+</code></pre>
+
+<p>My <code>undrive_google.yml</code> config file looks like this (sanitized a bit):</p>
+<pre class="code language-yaml"><code class="language-yaml">file_id: &quot;the-key-to-my-google-drive-file(find-in-the-url)&quot;
+key_file: serviceid-1234567890.json
+dir: /my/path/to/my/cv
+rename_html: resume.html
+rename_pattern:
+  - &quot; &quot;
+  - &quot;_&quot;
+extensions: zip
+keep_zip: true
+unzip: true
+verbose: true
+sweep: true
+</code></pre>
+
+<p>The liberated files get published at <a href="https://railsbling.com/cv">https://railsbling.com/cv</a>.</p>
+
 <h2 id="-floss-funding">🦷 FLOSS Funding</h2>
 
 <p>While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.<br>
@@ -597,7 +678,7 @@ Please consider sponsoring me or the project.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Oct 20 23:42:27 2025 by
+  Generated on Tue Oct 21 01:46:25 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.7).
 </div>
