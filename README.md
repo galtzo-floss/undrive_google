@@ -64,6 +64,34 @@ If yes, DO NOT use this gem. Instead follow [these instructions](https://support
 OTOH, if you want to "own", host, track, etc your 'own' files
 (e.g. your resume), DO use this gem.
 
+### Story Time
+
+Imagine Google Drive is a 🐭
+Imagine your file (e.g. resume) is a 🍪
+🐭's 🍪 exporter: 🖨
+
+Tell me if you've heard this one already.
+
+1. Give 🐭 your 🍪 for "safe-keeping"
+2. Recognizing this SPoF, you ask 🐭 to give back a 🍪 copy
+3. "I'll run it through my 🍪 🖨", says 🐭
+4. 🖨 replicates various 🍪 extensions: `pdf`, `odt`, `docx`, `txt`, `rtf`, `zip`, and `epub`
+5. Rename 🍪 for web (e.g. replace ` ` with `_`)
+6. Extract replicated `.zip` format to `.html`
+7. Rename extracted HTML file for self-hosting
+8. Realize 🐭's HTML is invalid
+9. Fix 🐭's broke-ass (missing `lang` attribute and `title` element)
+10. Upload 🍪 to your website (you're on your own for this part)
+11. Finally Finished!
+12. Find mistakes 😭
+13. Bake a new 🍪
+14. GOTO 1
+
+This gem solves the classic 🐭-🍪 problem by automating steps 3-9.
+Will save at least 15 minutes each loop.
+
+Note that it doesn't have to be a resume.
+There are likely other use cases that apply.
 
 ## 💡 Info you can shake a stick at
 
@@ -258,6 +286,59 @@ title: 'My Cool HTML'
 ```
 
 ## 🔧 Basic Usage
+
+### Example: Export epub & Unzip html
+
+NOTE: There is a bug (missing feature) in `google_drive` gem preventing export of `epub` format.  You can use my patched branch if you need `epub`:
+
+Create a Gemfile:
+```ruby
+source "https://gem.coop"
+
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+```
+
+Please upvote this PR [#427](https://github.com/gimite/google-drive-ruby/pull/427)!
+
+When liberating your files, ensure the script will use the Gemfile if it isn't in the same directory where you are running the `undrive_google` command:
+```shell
+BUNDLE_GEMFILE=path/to/Gemfile bundle update
+BUNDLE_GEMFILE=path/to/Gemfile bundle exec undrive_google -c path/to/config
+```
+NOTE: If the Gemfile and the config are in the same, current, directory, you can simply run:
+```shell
+bundle exec undrive_google
+```
+
+My complete `Gemfile` looks like this:
+```ruby
+# frozen_string_literal: true
+
+source "https://gem.coop"
+
+gem "undrive_google", "~> 1.1"
+
+# See: https://github.com/gimite/google-drive-ruby/pull/427
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+```
+
+My `undrive_google.yml` config file looks like this (sanitized a bit):
+```yaml
+file_id: "the-key-to-my-google-drive-file(find-in-the-url)" 
+key_file: serviceid-1234567890.json
+dir: /my/path/to/my/cv
+rename_html: resume.html
+rename_pattern:
+  - " "
+  - "_"
+extensions: zip
+keep_zip: true
+unzip: true
+verbose: true
+sweep: true
+```
+
+The liberated files get published at [https://railsbling.com/cv](https://railsbling.com/cv).
 
 ## 🦷 FLOSS Funding
 
