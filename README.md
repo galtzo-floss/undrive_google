@@ -322,7 +322,7 @@ gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-m
 
 My `undrive_google.yml` config file looks like this (sanitized a bit):
 ```yaml
-file_id: "the-key-to-my-google-drive-file(find-in-the-url)" 
+file_id: "the-key-to-my-google-drive-file(find-in-the-url)"
 key_file: serviceid-1234567890.json
 dir: /my/path/to/my/cv
 rename_html: resume.html
