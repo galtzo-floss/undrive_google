@@ -110,7 +110,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 1.1")                     # ruby >= 2.3.0
+  spec.add_development_dependency("kettle-dev", "~> 1.1")                           # ruby >= 2.3.0
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.2")                      # ruby >= 2.0.0
@@ -124,7 +124,6 @@ Gem::Specification.new do |spec|
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.0")                           # ruby >= 1.8.7, for testing against multiple versions of dependencies
   spec.add_development_dependency("kettle-test", "~> 1.0")                          # ruby >= 2.3
-  spec.add_development_dependency("rspec-pending_for", "~> 0.0", ">= 0.0.17")       # ruby >= 2.3, used to skip specs on incompatible Rubies
 
   # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0

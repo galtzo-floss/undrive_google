@@ -24,7 +24,7 @@ GIT
 PATH
   remote: .
   specs:
-    undrive_google (1.1.1)
+    undrive_google (1.1.2)
       google_drive (~> 3.0, >= 3.0.7)
       version_gem (~> 1.1, >= 1.1.9)
 
@@ -147,7 +147,7 @@ GEM
     json (2.15.1)
     jwt (2.10.2)
       base64
-    kettle-dev (1.1.34)
+    kettle-dev (1.1.35)
     kettle-soup-cover (1.0.10)
       simplecov (~> 0.22)
       simplecov-cobertura (~> 3.0)
@@ -157,11 +157,12 @@ GEM
       simplecov-rcov (~> 0.3, >= 0.3.7)
       simplecov_json_formatter (~> 0.1, >= 0.1.4)
       version_gem (~> 1.1, >= 1.1.8)
-    kettle-test (1.0.4)
+    kettle-test (1.0.5)
       appraisal2 (~> 3.0)
       backports (~> 3.0)
       rspec (~> 3.0)
       rspec-block_is_expected (~> 1.0, >= 1.0.6)
+      rspec-pending_for (~> 0.1, >= 0.1.19)
       rspec-stubbed_env (~> 1.0, >= 1.0.4)
       rspec_junit_formatter (~> 0.6)
       silent_stream (~> 1.0, >= 1.0.12)
@@ -406,7 +407,6 @@ DEPENDENCIES
   rdoc (~> 6.11)
   reek (~> 6.5)
   require_bench (~> 1.0, >= 1.0.4)
-  rspec-pending_for (~> 0.0, >= 0.0.17)
   rubocop-lts (~> 22.0)
   rubocop-on-rbs (~> 1.8)
   rubocop-packaging (~> 0.6, >= 0.6.0)
