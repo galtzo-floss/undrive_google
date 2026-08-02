@@ -41,7 +41,7 @@ module UndriveGoogle
 
   FILE_BY = {
     title: :title,
-    key: :key,
+    key: :key
   }.freeze
   # epub is conditionally in DL_FILE_TYPES depending on the google_drive gem used.
   DL_FILE_TYPES = if HAS_EPUB

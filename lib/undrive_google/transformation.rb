@@ -7,7 +7,7 @@ module UndriveGoogle
     :fix_html,
     :rename_html,
     :delete_zip,
-    keyword_init: true,
+    keyword_init: true
   ) do
     def liberate!
       each(&:process)

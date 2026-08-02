@@ -62,7 +62,7 @@ module UndriveGoogle
         "-c",
         "--config-yaml PATH",
         String,
-        "Path to UndriveGoogle config YAML file",
+        "Path to UndriveGoogle config YAML file"
       ) do |config_yaml|
         self.config_yaml = config_yaml
         load_yaml
@@ -74,7 +74,7 @@ module UndriveGoogle
         "-k",
         "--key-file PATH",
         String,
-        "Path to Google Service Account Keys JSON file",
+        "Path to Google Service Account Keys JSON file"
       ) do |key_file|
         self.key_file = key_file
       end
@@ -85,7 +85,7 @@ module UndriveGoogle
         "-i",
         "--file-id ID",
         String,
-        "ID used to find file (key or title)",
+        "ID used to find file (key or title)"
       ) do |file_id|
         self.file_id = file_id
       end
@@ -96,7 +96,7 @@ module UndriveGoogle
         "-b",
         "--file-by [TYPE]",
         %i[key title],
-        "Select type of ID used to find file (key, title)",
+        "Select type of ID used to find file (key, title)"
       ) do |file_by|
         self.file_by = file_by
       end
@@ -139,7 +139,7 @@ module UndriveGoogle
         "-d",
         "--dir PATH",
         String,
-        "Path to directory where liberated files will go",
+        "Path to directory where liberated files will go"
       ) do |dir|
         self.dir = dir.strip
       end
@@ -162,7 +162,7 @@ module UndriveGoogle
       parser.on(
         "-s",
         "--[no-]sweep",
-        "Delete all files from directory specified by -d or --dir prior to liberation",
+        "Delete all files from directory specified by -d or --dir prior to liberation"
       ) do |sweep|
         self.sweep = sweep
       end

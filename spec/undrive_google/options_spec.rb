@@ -100,7 +100,7 @@ RSpec.describe UndriveGoogle::Options do
         it "sets key_file" do
           block_is_expected.to change(
             instance,
-            :key_file,
+            :key_file
           ).from("spec/config/serviceid-111111d111111.json").to("asdf.json")
         end
       end
@@ -139,7 +139,7 @@ RSpec.describe UndriveGoogle::Options do
         it "sets extensions" do
           block_is_expected.to change(
             instance,
-            :extensions,
+            :extensions
           ).from(%i[docx odt rtf pdf txt zip epub]).to(%w[docx txt rtf])
         end
       end

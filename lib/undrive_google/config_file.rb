@@ -51,7 +51,7 @@ module UndriveGoogle
 
     def validate(config)
       unknown = config.keys - YAML_KEYS
-      unknown -= ALL_FILE_TYPES.map { |f| "rename_#{f}".to_sym }
+      unknown -= ALL_FILE_TYPES.map { |f| :"rename_#{f}" }
       return if unknown.empty?
 
       raise UndriveGoogle::Error, "Unhandled config keys #{unknown.inspect}"

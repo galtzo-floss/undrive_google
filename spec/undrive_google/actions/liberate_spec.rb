@@ -45,7 +45,7 @@ RSpec.describe UndriveGoogle::Actions::Liberate do
           " ", # this is a hack to disable FixHtml
           "-t",
           " ", # this is a hack to disable FixHtml
-          "--no-unzip",
+          "--no-unzip"
         ]
       }
       let(:extension) { "zip" }
@@ -75,7 +75,7 @@ RSpec.describe UndriveGoogle::Actions::Liberate do
           " ", # this is a hack to disable FixHtml
           "-t",
           " ", # this is a hack to disable FixHtml
-          "-u",
+          "-u"
         ]
       }
       let(:extension) { "zip" }
