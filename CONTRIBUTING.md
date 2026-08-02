@@ -22,34 +22,12 @@ Follow these instructions:
 6. Make sure to add tests for it. This is important, so it doesn't break in a future release.
 7. Create new Pull Request.
 
-## Executables vs Rake tasks
+## Executables
 
 Executables shipped by undrive_google can be used with or without generating the binstubs.
 They will work when undrive_google is installed globally (i.e., `gem install undrive_google`) and do not require that undrive_google be in your bundle.
 
-- kettle-changelog
-- kettle-commit-msg
-- undrive_google-setup
-- kettle-dvcs
-- kettle-pre-release
-- kettle-readme-backers
-- kettle-release
-
-However, the rake tasks provided by undrive_google do require undrive_google to be added as a development dependency and loaded in your Rakefile.
-See the full list of rake tasks in head of Rakefile
-
-**Gemfile**
-```ruby
-group :development do
-  gem "undrive_google", require: false
-end
-```
-
-**Rakefile**
-```ruby
-# Rakefile
-require "undrive_google"
-```
+- undrive_google
 
 ## Environment Variables for Local Development
 
@@ -176,7 +154,7 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 
 #### Automated process
 
-1. Update version.rb to contian the correct version-to-be-released.
+1. Update version.rb to contain the correct version-to-be-released.
 2. Run `bundle exec kettle-changelog`.
 3. Run `bundle exec kettle-release`.
 
