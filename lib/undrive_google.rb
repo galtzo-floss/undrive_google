@@ -6,6 +6,7 @@ require "forwardable" # The Ruby Delegation library
 require "optparse" # The Ruby CLI Options Parsing library
 require "psych" # The Ruby YAML library
 require "singleton" # The Ruby Singleton library
+require_relative "undrive_google/version"
 
 # third party gems
 begin
@@ -19,8 +20,6 @@ HAS_EPUB = GoogleDrive::Util::EXT_TO_CONTENT_TYPE.key?(".epub")
 unless HAS_EPUB
   warn "[WARN] Your version of google_drive does not support .epub. If you need .epub support see: https://sr.ht/~galtzo/undrive_google/#note-export-epub-amp-unzip-html"
 end
-
-require_relative "undrive_google/version"
 
 require_relative "undrive_google/helpers/parse"
 require_relative "undrive_google/actions/liberate"
