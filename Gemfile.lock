@@ -484,8 +484,10 @@ GEM
     zlib (3.2.1)
 
 PLATFORMS
+  ruby
   x86_64-darwin-21
   x86_64-linux
+  x86_64-linux-gnu
 
 DEPENDENCIES
   addressable (>= 2.8, < 3)
