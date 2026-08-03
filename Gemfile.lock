@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/pboling/google-drive-ruby.git
+  revision: cd5ca1f80373fa7a57379f64a93d0b35c0299e99
+  branch: pboling-epub-mimetype
+  specs:
+    google_drive (3.0.7)
+      google-apis-drive_v3 (>= 0.5.0, < 1.0.0)
+      google-apis-sheets_v4 (>= 0.4.0, < 1.0.0)
+      googleauth (>= 0.5.0, < 1.0.0)
+      nokogiri (>= 1.5.3, < 2.0.0)
+
 PATH
   remote: .
   specs:
@@ -125,11 +136,6 @@ GEM
       google-apis-core (>= 0.11.0, < 2.a)
     google-apis-sheets_v4 (0.26.0)
       google-apis-core (>= 0.11.0, < 2.a)
-    google_drive (3.0.7)
-      google-apis-drive_v3 (>= 0.5.0, < 1.0.0)
-      google-apis-sheets_v4 (>= 0.4.0, < 1.0.0)
-      googleauth (>= 0.5.0, < 1.0.0)
-      nokogiri (>= 1.5.3, < 2.0.0)
     googleauth (0.17.1)
       faraday (>= 0.17.3, < 2.0)
       jwt (>= 1.4, < 3.0)
@@ -379,6 +385,7 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_engine (2.0.3)
     ruby_version (1.0.3)
+    rubyzip (3.4.1)
     signet (0.21.0)
       addressable (~> 2.8)
       faraday (>= 0.17.5, < 3.a)
@@ -492,6 +499,7 @@ DEPENDENCIES
   erb (~> 6.0, >= 6.0.6)
   gem_bench (~> 2.0, >= 2.0.5)
   gitmoji-regex (~> 2.0, >= 2.0.11)
+  google_drive!
   irb (~> 1.17)
   kettle-dev (~> 2.5, >= 2.5.17)
   kettle-drift (~> 1.0, >= 1.0.11)
@@ -514,6 +522,7 @@ DEPENDENCIES
   rubocop-packaging (~> 0.6, >= 0.6.0)
   rubocop-ruby3_1 (~> 3.0, >= 3.0.5)
   ruby-progressbar (~> 1.13)
+  rubyzip (~> 3.2)
   standard (~> 1.56, >= 1.56.0)
   stone_checksums (~> 1.0, >= 1.0.8)
   stringio (>= 3.0)
