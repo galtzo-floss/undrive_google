@@ -4,7 +4,7 @@ RSpec.describe UndriveGoogle::Actions::Sweep do
   subject(:instance) { described_class.new }
 
   let(:parser) { OptionParser.new }
-  let(:dir) { "tmp" }
+  let(:dir) { "spec/fixtures/tmp" }
   let(:args) { ["-d", dir] }
 
   before do
