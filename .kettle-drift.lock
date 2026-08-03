@@ -1,14 +1,4 @@
 {
-  "# `kettle/test/rspec` installs harness helpers documented in spec/README.md.\n# `kettle/test/rspec` installs harness helpers documented in spec/README.md.": [
-    {
-      "file": "spec/spec_helper.rb",
-      "lines": [
-        13,
-        14,
-        15
-      ]
-    }
-  ],
   "// Use 'forwardPorts' to make a list of ports inside the container available locally.\n// \"forwardPorts\": [],": [
     {
       "file": ".devcontainer/devcontainer.json",
