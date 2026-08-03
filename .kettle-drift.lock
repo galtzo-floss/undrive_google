@@ -7,5 +7,42 @@
         22
       ]
     }
+  ],
+  "direct: undrive_google.gemspec\nmodular: gemfiles/modular/injected.gemfile": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130
+      ]
+    }
+  ],
+  "modular: gemfiles/modular/injected.gemfile\naction: keep_both": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        96,
+        101,
+        116,
+        121,
+        126,
+        131
+      ]
+    }
+  ],
+  "modular: gemfiles/modular/injected.gemfile\naction: remove_modular_gem": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        106,
+        111
+      ]
+    }
   ]
 }
