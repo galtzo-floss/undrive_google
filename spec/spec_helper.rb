@@ -12,6 +12,7 @@ require "support/rspec_matchers/non_output"
 require "kettle/test/rspec"
 # `kettle/test/rspec` installs harness helpers documented in spec/README.md.
 # `kettle/test/rspec` installs harness helpers documented in spec/README.md.
+# `kettle/test/rspec` installs harness helpers documented in spec/README.md.
 
 # NOTE: Gemfiles for older rubies (< 2.7) won't have kettle-soup-cover.
 #       The rescue LoadError handles that scenario.
