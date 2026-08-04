@@ -146,7 +146,7 @@ template_state:
     gemfiles/modular/stringio/vHEAD.gemfile.example: e0497ab6dad9667b22725485b781e9d99349a079250eb29cb125d58f01f4a5be
     gemfiles/modular/style.gemfile.example: a15db732f566d958c2459ef549ae3877d984df3d205116e714284d1fe4f9b068
     gemfiles/modular/style_local.gemfile.example: '0083605323d23879dc7223f0198e9f1db24a25fa38730c4dbcc71c7a8a4c307f'
-    gemfiles/modular/templating.gemfile.example: f63e9254dcd76f02406fff515090570d2394dae220faac4f9b3cad6c1a78346a
+    gemfiles/modular/templating.gemfile.example: 3b2db799f879401ec595c54a5c3ca825b1f51a9e8976b932f80f12a06ea9791d
     gemfiles/modular/templating_local.gemfile.example: 84b328af40ee4f9b0355cd5b466f7c7903c49f86e9eb0d1bc3a1f34c8f0f1668
     gemfiles/modular/webrick/r4/v1.9.gemfile.example: 1ee940ff54d5ca3ce7fcff0d82ee9553386979656b9e220d5be5404d0991d5ea
     gemfiles/modular/webrick/vHEAD.gemfile.example: da545f591af987648ffbaba181707480a38dfb375db7d289617986ec2c2ca23b
@@ -922,8 +922,8 @@ files:
   gemfiles/modular/templating.gemfile:
     recipe: template_source_application_gemfiles_modular_templating_gemfile
     action: write
-    dest_sha256: f63e9254dcd76f02406fff515090570d2394dae220faac4f9b3cad6c1a78346a
-    input_fingerprint: c45020ce8b9b23887781b37edfac560668c460fcebb583d15fe69c3ed48e06e1
+    dest_sha256: 3b2db799f879401ec595c54a5c3ca825b1f51a9e8976b932f80f12a06ea9791d
+    input_fingerprint: 34f318f9199688eb36e2712485d93aa67fc683ba8d155e9c6fc39cef2d89735f
     template_sources:
     - gemfiles/modular/templating.gemfile.example
   gemfiles/modular/templating_local.gemfile:
@@ -993,7 +993,7 @@ files:
     recipe: template_source_application_lib_undrive_google_version_rb
     action: write
     dest_sha256: 553bac4281a111b6b46a4ca430400489df34284d7224ab3793693212ebabd16b
-    input_fingerprint: 4ec594e7d6a4884fadb4698def4ecf12cbb34ac2c93802e58d57356411c26370
+    input_fingerprint: 98d55c314b7f5d8dc0218c0a341196fa493090654c89bdb50ed476e2e74dea2f
     template_sources:
     - lib/gem/version.rb.example
   mise.toml:
@@ -1035,6 +1035,6 @@ files:
     recipe: template_source_application_undrive_google_gemspec
     action: write
     dest_sha256: dbc923d2e6b3c0119c963ccd9fd043e1f81cef9b78f221a50d17153e421cd010
-    input_fingerprint: 56fa804b3a7b1c2630b88dd95ab49c5b28b3b01c219008a842276629a6ff74c9
+    input_fingerprint: 5068c8cfc50cde814e7beea8d8f172a960034fdd9584be146923fcc4bf6e098c
     template_sources:
     - gem.gemspec.example

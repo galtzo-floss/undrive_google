@@ -1,4 +1,7 @@
 {
+  "gemfiles/modular/templating.gemfile:3018447732": [
+    [14, 3, 47, "Bundler/DuplicatedGem: Gem `tree_sitter_language_pack` requirements already given on line 10 of the Gemfile.", 3843603197]
+  ],
   "spec/exe/undrive_google_cli_spec.rb:1396357036": [
     [3, 16, 20, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 1299462397]
   ],
