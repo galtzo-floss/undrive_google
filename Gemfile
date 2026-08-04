@@ -18,6 +18,13 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from undrive_google.gemspec
 gemspec
 
+# Project-specific integration dependencies. The google_drive fork supplies
+# the EPUB export support exercised by this gem's configuration and specs.
+# kettle-jem:freeze
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
+gem "rubyzip", "~> 3.2"
+# kettle-jem:unfreeze
+
 gem "kettle-family", "~> 1.2", ">= 1.2.23"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
