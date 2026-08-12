@@ -25,7 +25,7 @@ gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-m
 gem "rubyzip", "~> 3.2"
 # kettle-jem:unfreeze
 
-gem 'kettle-family', '~> 1.2', '>= 1.2.43'
+gem 'kettle-family', '~> 1.2', '>= 1.2.50'
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.4", require: false # ruby >= 3.2.0
