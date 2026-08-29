@@ -101,6 +101,8 @@ Please file a bug if you notice a violation of semantic versioning.
   legacy manual bundle install path, avoiding setup-time Bundler full-index
   failures against `gem.coop`.
 
+- Restore the EPUB and ZIP integration dependencies removed by an earlier template pass.
+
 ### Security
 
 ## [1.1.2] - 2025-10-20

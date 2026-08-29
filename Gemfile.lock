@@ -1,4 +1,15 @@
 GIT
+  remote: git@github.com:pboling/google-drive-ruby.git
+  revision: cd5ca1f80373fa7a57379f64a93d0b35c0299e99
+  branch: pboling-epub-mimetype
+  specs:
+    google_drive (3.0.7)
+      google-apis-drive_v3 (>= 0.5.0, < 1.0.0)
+      google-apis-sheets_v4 (>= 0.4.0, < 1.0.0)
+      googleauth (>= 0.5.0, < 1.0.0)
+      nokogiri (>= 1.5.3, < 2.0.0)
+
+GIT
   remote: https://github.com/pboling/rubocop-packaging.git
   revision: 3539ba858d379740d638566faee9e56b2b854145
   ref: 3539ba858d379740d638566faee9e56b2b854145
@@ -177,11 +188,6 @@ GEM
       google-apis-core (>= 0.11.0, < 2.a)
     google-apis-sheets_v4 (0.26.0)
       google-apis-core (>= 0.11.0, < 2.a)
-    google_drive (3.0.7)
-      google-apis-drive_v3 (>= 0.5.0, < 1.0.0)
-      google-apis-sheets_v4 (>= 0.4.0, < 1.0.0)
-      googleauth (>= 0.5.0, < 1.0.0)
-      nokogiri (>= 1.5.3, < 2.0.0)
     googleauth (0.17.1)
       faraday (>= 0.17.3, < 2.0)
       jwt (>= 1.4, < 3.0)
@@ -510,6 +516,7 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_engine (2.0.3)
     ruby_version (1.0.3)
+    rubyzip (3.5.0)
     service_actor (3.9.4)
       zeitwerk (>= 1.0)
     signet (0.22.0)
@@ -665,6 +672,7 @@ DEPENDENCIES
   erb (~> 6.0, >= 6.0.7)
   gem_bench (~> 2.0, >= 2.0.5)
   gitmoji-regex (~> 2.0, >= 2.0.12)
+  google_drive!
   irb (~> 1.17)
   kettle-changelog (~> 1.0, >= 1.0.5)
   kettle-dev (~> 3.0, >= 3.0.17)
@@ -687,6 +695,7 @@ DEPENDENCIES
   rubocop-packaging!
   rubocop-ruby3_1 (~> 3.0, >= 3.0.5)
   ruby-progressbar (~> 1.13)
+  rubyzip (~> 3.2)
   standard (~> 1.56, >= 1.56.0)
   stone_checksums (~> 1.0, >= 1.0.8)
   stringio (>= 3.0)
@@ -773,7 +782,7 @@ CHECKSUMS
   google-apis-core (0.11.3) sha256=43217013b129d7d52c31ebf94146646c55f463ed25e68ad7523fb644d5a9cc97
   google-apis-drive_v3 (0.46.0) sha256=9d8b7e0268bfda445f1a5f7edeb6c6295e8ca050a74daf5677ae84e17e881800
   google-apis-sheets_v4 (0.26.0) sha256=174c91aa7bdade339345c9ba6a115aceb7907c1350e899304c84d10689699925
-  google_drive (3.0.7) sha256=68da75f5bfac109f66912db735844327446ab682ef279e9e93ec038ce4468549
+  google_drive (3.0.7)
   googleauth (0.17.1) sha256=d4a9cbce0d6b5fbb9e6f8e42c18ab44ea38594757952d94706461dabc4c28922
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
   hexapdf (1.10.0) sha256=9c2e8d094876878c6203d441655fafc1890870041456e03205eec7d83edf9db2
@@ -876,6 +885,7 @@ CHECKSUMS
   ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
   ruby_engine (2.0.3) sha256=ca2ae7def8cfcdc2bfb6a186d36d5d59c8b403245dc0256c3802b767fa278aaa
   ruby_version (1.0.3) sha256=5930f9950746b7e6c973184398ee364ee7440b170fef7922b9f5cdf317f1ccb5
+  rubyzip (3.5.0) sha256=f77c49d737a849b662f6ca4de473f31b4ecd8288f1c9f901a5c820641f0f8d7c
   service_actor (3.9.4) sha256=e63b523630b9a7e62959b2a90113b08d2565b5de9c148557b281ef847c9539ce
   signet (0.22.0) sha256=b76d495ccb07ad35dbc89f3e920665a9d8ed717141955034005d7843dcfe4780
   silent_stream (1.0.12) sha256=377c43aa10033fe90c33b39ea8cd97d79f2d1c4856df598efc56f3091f3ae782
