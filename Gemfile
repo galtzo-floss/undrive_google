@@ -8,6 +8,7 @@
 
 source "https://gem.coop"
 
+git_source(:github) { |repo_name| "git@github.com:#{repo_name}.git" }
 git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
@@ -18,14 +19,7 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from undrive_google.gemspec
 gemspec
 
-# Project-specific integration dependencies. The google_drive fork supplies
-# the EPUB export support exercised by this gem's configuration and specs.
-# kettle-jem:freeze
-gem "google_drive", git: "git@github.com:pboling/google-drive-ruby.git", branch: "pboling-epub-mimetype"
-gem "rubyzip", "~> 3.2"
-# kettle-jem:unfreeze
-
-gem "kettle-family", "~> 1.2", ">= 1.2.74"
+gem "kettle-family", "~> 1.2", ">= 1.2.79"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.5", require: false # ruby >= 3.2.0
