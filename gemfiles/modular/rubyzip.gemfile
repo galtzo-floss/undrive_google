@@ -1,0 +1,4 @@
+# frozen_string_literal: true
+
+# The unzip transformation (and its specs) use rubyzip; lib requires "zip" when present.
+gem "rubyzip", "~> 3.0" # ruby >= 3.0

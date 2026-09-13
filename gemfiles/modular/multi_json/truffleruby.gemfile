@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+
+if RUBY_ENGINE == "truffleruby" && Gem::Version.new(RUBY_ENGINE_VERSION) < Gem::Version.new("33")
+  # multi_json >= 1.20 uses fiber storage (Fiber[]), which TruffleRuby before 33 lacks.
+  gem "multi_json", "< 1.20"
+end

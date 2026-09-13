@@ -1,0 +1,5 @@
+# frozen_string_literal: true
+
+# The google_drive fork adds the EPUB export mime type that undrive_google's
+# epub support (and its specs) rely on; released google_drive lacks it.
+gem "google_drive", github: "pboling/google-drive-ruby", branch: "pboling-epub-mimetype"
