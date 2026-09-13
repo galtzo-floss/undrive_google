@@ -524,6 +524,7 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_engine (2.0.3)
     ruby_version (1.0.3)
+    rubyzip (3.6.0)
     service_actor (3.9.4)
       zeitwerk (>= 1.0)
     signet (0.22.0)
@@ -706,6 +707,7 @@ DEPENDENCIES
   rubocop-packaging!
   rubocop-ruby3_1 (~> 3.0, >= 3.0.7)
   ruby-progressbar (~> 1.13)
+  rubyzip (~> 3.0)
   standard (~> 1.56, >= 1.56.0)
   stone_checksums (~> 1.0, >= 1.0.9)
   stringio (>= 3.0)
@@ -901,6 +903,7 @@ CHECKSUMS
   ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
   ruby_engine (2.0.3) sha256=ca2ae7def8cfcdc2bfb6a186d36d5d59c8b403245dc0256c3802b767fa278aaa
   ruby_version (1.0.3) sha256=5930f9950746b7e6c973184398ee364ee7440b170fef7922b9f5cdf317f1ccb5
+  rubyzip (3.6.0) sha256=268994d44d62282d1cfd99bf10eae48d7267199158ad7ea3e1fee2da9458b695
   service_actor (3.9.4) sha256=e63b523630b9a7e62959b2a90113b08d2565b5de9c148557b281ef847c9539ce
   signet (0.22.0) sha256=b76d495ccb07ad35dbc89f3e920665a9d8ed717141955034005d7843dcfe4780
   silent_stream (1.0.12) sha256=377c43aa10033fe90c33b39ea8cd97d79f2d1c4856df598efc56f3091f3ae782
