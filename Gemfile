@@ -27,6 +27,7 @@ gem "nomono", "~> 1.1", ">= 1.1.5", require: false # ruby >= 3.2.0
 eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 # Default local test bundle
 eval_gemfile "gemfiles/modular/google_drive.gemfile"
+eval_gemfile "gemfiles/modular/rubyzip.gemfile"
 
 # Debugging
 eval_gemfile "gemfiles/modular/debug.gemfile"

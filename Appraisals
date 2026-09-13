@@ -54,30 +54,35 @@ appraise "unlocked_deps" do
   eval_gemfile "modular/style.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "head" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "current" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "dep-heads" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/runtime_heads.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "ruby-3-1" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "ruby-3-2" do
@@ -85,17 +90,22 @@ appraise "ruby-3-2" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
+  eval_gemfile "modular/multi_json/truffleruby.gemfile"
 end
 
 appraise "ruby-3-3" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
+  eval_gemfile "modular/multi_json/truffleruby.gemfile"
 end
 
 appraise "ruby-3-4" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "audit" do
@@ -108,6 +118,7 @@ appraise "coverage" do
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
+  eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "style" do

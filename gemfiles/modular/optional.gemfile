@@ -14,6 +14,3 @@ gem "rbs", ">= 3.0", require: false # ruby >= 3.1
 # Required for kettle-pre-release
 # URL parsing with Unicode support (falls back to URI if not available)
 gem "addressable", ">= 2.8", "< 3" # ruby >= 2.2
-
-# Unzip transformation (and thus html export); lib requires "zip" when present
-gem "rubyzip", "~> 3.0" # ruby >= 3.0

@@ -17,3 +17,5 @@ eval_gemfile("modular/style.gemfile")
 eval_gemfile("modular/x_std_libs.gemfile")
 
 eval_gemfile("modular/google_drive.gemfile")
+
+eval_gemfile("modular/rubyzip.gemfile")

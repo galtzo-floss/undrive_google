@@ -9,3 +9,5 @@ eval_gemfile("modular/optional.gemfile")
 eval_gemfile("modular/runtime_heads.gemfile")
 
 eval_gemfile("modular/google_drive.gemfile")
+
+eval_gemfile("modular/rubyzip.gemfile")
