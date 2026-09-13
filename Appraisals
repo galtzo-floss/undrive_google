@@ -58,28 +58,24 @@ appraise "unlocked_deps" do
 end
 
 appraise "head" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
   eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "current" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
   eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "dep-heads" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/runtime_heads.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
   eval_gemfile "modular/rubyzip.gemfile"
 end
 
 appraise "ruby-3-1" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
   eval_gemfile "modular/rubyzip.gemfile"
@@ -87,7 +83,6 @@ end
 
 appraise "ruby-3-2" do
   eval_gemfile "modular/json/truffleruby_23_1.gemfile"
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
   eval_gemfile "modular/rubyzip.gemfile"
@@ -95,7 +90,6 @@ appraise "ruby-3-2" do
 end
 
 appraise "ruby-3-3" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/google_drive.gemfile"
   eval_gemfile "modular/rubyzip.gemfile"
@@ -109,7 +103,6 @@ appraise "ruby-3-4" do
 end
 
 appraise "audit" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 
@@ -122,7 +115,6 @@ appraise "coverage" do
 end
 
 appraise "style" do
-  eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/style.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end

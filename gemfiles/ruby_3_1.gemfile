@@ -4,8 +4,6 @@ source "https://gem.coop"
 
 gemspec path: "../"
 
-eval_gemfile("modular/optional.gemfile")
-
 eval_gemfile("modular/x_std_libs/r3.1/libs.gemfile")
 
 eval_gemfile("modular/google_drive.gemfile")
