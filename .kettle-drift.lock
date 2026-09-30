@@ -12,14 +12,23 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        110,
         115,
         120,
         125,
         130,
         135,
         140,
-        145
+        145,
+        150
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        43,
+        49
       ]
     }
   ],
@@ -27,12 +36,12 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        111,
         116,
-        131,
+        121,
         136,
         141,
-        146
+        146,
+        151
       ]
     }
   ],
@@ -40,8 +49,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        121,
-        126
+        126,
+        131
       ]
     }
   ]
