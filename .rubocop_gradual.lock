@@ -1,7 +1,4 @@
 {
-  "gemfiles/modular/style_local.gemfile:1858046555": [
-    [71, 23, 20, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 1851388465]
-  ],
   "spec/exe/undrive_google_cli_spec.rb:1396357036": [
     [3, 16, 20, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 1299462397]
   ]

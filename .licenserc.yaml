@@ -1,6 +1,6 @@
 header:
   license:
-    spdx-id: MIT
+    spdx-id: "MIT"
 
 dependency:
   files:
@@ -9,6 +9,3 @@ dependency:
     - name: "simplecov-rcov"
       version: "0.3.7"
       license: "MIT"
-    - name: "httpclient"
-      version: "2.9.0"
-      license: "Ruby"
