@@ -103,10 +103,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,
   preserving comments and trailing commas during template updates.
 
-- kettle-jem-template-20260729-001 - Generated JRuby 9.4 workflows now use the
-  legacy manual bundle install path, avoiding setup-time Bundler full-index
-  failures against `gem.coop`.
-
 - Restore the EPUB and ZIP integration dependencies removed by an earlier template pass.
 
 ### Security

@@ -1011,7 +1011,7 @@ DEPENDENCIES
   structuredmerge-core!
   toml-merge!
   tree_haver!
-  turbo_tests2 (~> 4.0, >= 4.0.0)!
+  turbo_tests2 (~> 4.0, >= 4.0.1)!
   typescript-merge!
   undrive_google!
   vcr (>= 4)
